@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+}
+
+#hpArea {
+}
+
+#actionArea{
+}
+
+p {
+  
+}
+
+button {
+  width: 240px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+#hp {
+  opacity: 50%;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameArea{
+  display:box;
+}
+
+#myText{
+  margin-left: 8px;
+}
