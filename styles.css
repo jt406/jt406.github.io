@@ -151,7 +151,7 @@ body a {
 
 #work .project .description {
     /*width: 400px; /* 288px when above; 250px when below query */
-    margin-top: 4px;
+    margin-top: 6px;
     color: rgb(85, 93, 109, 0.8);
     /*color: #888888;
     font-size: 18px;
