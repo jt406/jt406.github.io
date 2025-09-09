@@ -1,0 +1,147 @@
+<!DOCTYPE html> 
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="../styles.css">
+		<script src="../script.js"></script>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="stock_search" class="header">
+				<input id="stock_name" type="text" placeholder="Search for a stock...">
+				<a href="stock.html">
+					<img id="right_arrow" src="../img/right_arrow.svg">
+				</a>
+			</div>
+
+			<div id="logo" class="header">
+				<a href="../index.html">
+					<img src="../img/logo.svg" />
+				</a>
+			</div>
+
+			<div id="favorites" class="header">
+				<img src="../img/favorites.svg" />
+			</div>
+
+			<div id="stock_name_title">
+				Google Inc. (GOOG)
+				<div id="stock_logo">
+					<img src="../img/google.svg" />
+				</div>
+			</div>
+
+			<div id="single_stock">
+				<div id="sentiment_circle">
+					<div id="sentiment_rating">
+						0.8
+					</div>
+				</div>
+
+				<div id="sentiment_description">
+					Very Positive
+					<div id="sentiment_emoji">
+						<img src="../img/happy.svg" />
+					</div>
+				</div>
+
+				<div id="scale">
+					<img src="../img/scale.svg" />
+					<div class="dot">
+					</div>
+				</div>
+			</div>
+
+			<div id="news">
+				<div class="headline">
+					Google's Big Ad-Blocking Update Comes to Chrome Tomorrow: Here's What We Know
+				</div>
+				<div class="preview">
+					It's been in the works for nearly a year and Google's great ad-pocalypse is now upon us. On Thursday, the Chrome browser will begin to automatically filter out ads that don't meet certain quality standards.
+				</div>
+				<img class="separator" src="../img/separator.svg">
+				<div class="headline">
+					What Unilever's CMO really said about Google and Facebook
+				</div>
+				<div class="preview">
+					No, the CPG giant isn't ditching the duopoly; quite the opposite, as the marketer urged his peers to double down on tech partnerships at the IAB's Annual Leadership Meeting this week.
+				</div>
+				<img class="separator" src="../img/separator.svg">
+				<div class="headline">
+					Is Steve Yegge Right About Google's Ability To Innovate?
+				</div>
+				<div class="preview">
+					If we're talking exclusively about product innovation, then yes, I agree that Google is not particularly innovative, nor have they ever been. Most all of their products are either copied or acquired.
+				</div>
+				<div class="right_arrow">
+					<img src="../img/right_arrow.svg" />
+				</div>
+			</div>
+
+			<div id="comparison">
+				<div class="compared_stock" id="stock_1">
+					<div class="stock_name">
+						Google Inc. (GOOGL)
+						<div class="stock_logo">
+							<img src="../img/google.svg" />
+						</div>
+						<div class="sentiment_circle green">
+							<div class="sentiment_rating">
+								0.8
+							</div>
+						</div>
+						<div class="sentiment_description">
+							Very positive
+							<div class="sentiment_emoji">
+								<img src="../img/happy.svg" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="horizontal_separator">
+					<img src="../img/horizontal_separator.svg" />
+				</div>
+
+				<div class="compared_stock" id="stock_2">
+					<div class="stock_name">
+						Apple Inc. (AAPL)
+						<div class="stock_logo">
+							<img src="../img/google.svg" />
+						</div>
+						<div class="sentiment_circle red">
+							<div class="sentiment_rating">
+								-0.6
+							</div>
+						</div>
+						<div class="sentiment_description">
+							Negative
+							<div class="sentiment_emoji">
+								<img src="../img/sad.svg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="actions">
+				<img id="add" src="../img/add_to_favorites.svg" />
+				<img id="compare" src="../img/compare_stocks.svg" />
+				<img id="read" src="../img/read_the_news.svg" />
+			</div>
+		</div>
+
+		<!-- <div id="loading">
+			<div id="logo">
+				<img src="../img/logo.svg" />
+			</div>
+		</div> -->
+
+
+	</body>
+</html>

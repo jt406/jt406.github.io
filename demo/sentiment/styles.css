@@ -1,0 +1,463 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(74, 74, 74);
+}
+
+body {
+
+    font-size: 20px;
+    color: rgb(74, 74, 74);
+    font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+	position: relative;
+	width: 732px;
+	margin: 0px auto;
+	padding-top: 40px;
+}
+
+#logo {
+	text-align: center;
+}
+
+#logo.header {
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+#logo.header img{
+	width: 100%;
+	height: 100%;
+}
+
+#logo.header:hover {
+	transform: scale(1.2);
+}
+
+#title {
+	margin-top: 40px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+#subtitle {
+	text-align: center;
+}
+
+#stock_search {
+	position: relative;
+	text-align: center;
+	margin-top: 120px;
+}
+
+#stock_search.header {
+	margin-top: 0px;
+}
+
+
+#stock_search #stock_name {
+	width: 240px;
+	height: 60px;
+
+	border-radius: 10px;
+	border: 1px solid #F7F7F7;
+	background: #F7F7F7;
+	padding-left: 20px;
+
+	font-size: 20px;
+	color: #9B9B9B;
+}
+
+#stock_search #right_arrow {
+	position: absolute;
+	left: 70%;
+	top: 25%;
+
+	cursor: pointer;
+  	transition: transform 0.25s;
+}
+
+#stock_search #right_arrow:hover {
+	transform: translateX(10px);
+}
+
+input:focus {
+	outline: none;
+}
+
+.separator {
+	margin-top: 40px;
+	text-align: center;
+}
+
+#select_prompt {
+	margin-top: 40px;
+	text-align: center;
+}
+
+#industries {
+	margin-top: 20px;
+	text-align: justify;
+}
+
+#industries:after {
+  content: '';
+  width: 100%; /* Ensures justification for single lines */
+  display: inline-block;
+}
+
+#industries .industry{
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+#industries .industry:hover {
+	transform: scale(1.3);
+}
+
+#favorites.header {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	cursor: pointer;
+
+	transition: 0.25s;
+}
+
+#favorites.header:hover {
+	transform: scale(1.2);
+}
+
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: white;
+
+    z-index: 3;
+
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+#loading #logo {
+	position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 160px;
+    height: 160px;
+
+    margin: -80px 0px 0px -80px; /* 160px height, 160px width */
+    animation-name: scale;
+    animation-duration: 1.5s;
+}
+
+#stock_name_title {
+	font-size: 36px;
+	font-weight: bold;
+
+	position: relative;
+
+	width: 317px;
+	margin: 80px auto 0px auto;
+}
+
+#stock_name_title #stock_logo {
+	position: absolute;
+	top: 3px;
+	left: -50px;
+}
+
+#single_stock {
+	margin-top: 40px;
+}
+
+#sentiment_circle {
+	position: relative;
+
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	background: #63F199;
+	margin: 0px auto;
+}
+
+#sentiment_circle #sentiment_rating {
+	position: absolute;
+
+	left: 50%;
+	top: 50%;
+
+	width: 200px;
+	height: 169px;
+
+	margin: -84px 0px 0px -100px;
+
+	font-size: 144px;
+	color: white;
+
+	text-shadow: -6px 6px #3CBB6B;
+}
+
+#sentiment_description {
+	position: relative;
+	width: 208px;
+	margin: 35px auto 0px auto;
+
+	font-size: 36px;
+}
+
+#sentiment_description #sentiment_emoji {
+	position: absolute;
+	top: 0px;
+	right: -50px;
+}
+
+#scale {
+	position: relative;
+	width: 720px;
+	margin: 40px auto 0px auto;
+	text-align: center;
+}
+
+#scale .dot {
+	position: absolute;
+	top: 36%;
+	left: 80%;
+
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+
+	background: #63F199;
+}
+
+#actions {
+	/*width: 723px;
+	margin: 80px auto 0px auto;
+	text-align: justify;*/
+
+	position: absolute;
+	width: 100%;
+	text-align: justify;
+
+	left: 0px;
+	top: 850px;
+}
+
+#actions:after {
+  content: '';
+  width: 100%; /* Ensures justification for single lines */
+  display: inline-block;
+}
+
+#actions img {
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+#actions img:hover {
+	transform: scale(1.1);
+}
+
+#industry_logo {
+	width: 120px;
+	height: 154px;
+
+	margin: 40px auto 0px auto;
+}
+
+#list {
+	margin-top: 60px;
+}
+
+.row {
+	position: relative;
+	cursor: pointer;
+
+	width: 732px;
+	height: 70px;
+
+	margin-top: 30px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.row #logo {
+	position: absolute;
+	left: 0px;
+	top: 7px;
+}
+
+.row #name {
+	position: absolute;
+	left: 45px;
+	top: 7px;
+
+	font-size: 24px;
+}
+
+.row .rating_circle {
+	position: absolute;
+	left: 400px;
+	top: 0px;
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.row .rating_circle.green {
+	background: #63F199;
+}
+
+.row .rating_circle.yellow {
+	background: #FEB551;
+}
+
+.row .rating_circle.red {
+	background: #F77A7A;
+}
+
+.row .rating_circle .rating_value {
+	position: absolute;
+	left: 6px;
+	top: 8px;
+
+	color: white;
+}
+
+.row .rating_circle.red .rating_value {
+	left:3px;
+}
+
+.row .emoji {
+	position: absolute;
+	left: 450px;
+	top: 0px;
+
+	width: 40px;
+	height: 40px;
+}
+
+.row .emoji img {
+	width: 100%;
+	height: 100%;
+}
+
+.row .add_as_favorite {
+	position: absolute;
+	left: 613px;
+	top: -10px;
+
+	transition: .25s;
+	cursor: pointer;
+}
+
+.row .add_as_favorite:hover {
+	transform: scale(1.2);
+}
+
+.list_actions {
+	position: relative;
+	margin-top: 40px;
+	width: 732px;
+	height: 60px;
+}
+
+.list_actions #sort {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.list_actions #right_arrow {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.list_actions #right_arrow:hover {
+	transform: translateX(10px);
+}
+
+.list_actions #sort:hover {
+	transform: scale(1.2);
+}
+
+#news {
+	margin-top: 40px;
+	opacity: 0;
+}
+
+#news .headline {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+#news .preview {
+	margin-top: 10px;
+}
+
+#news .separator {
+	margin-top: 20px;
+}
+
+#news .right_arrow {
+	margin-top: 20px;
+	text-align: right;
+}
+
+#news .right_arrow img{
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+#news .right_arrow img:hover {
+	transform: translateX(10px);
+}
+
+#comparison {
+	margin-top: 20px;
+}
+
+#comparison .compared_stock {
+
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes scale {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.2);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="logo">
+				<img src="img/logo.svg" />
+			</div>
+
+			<div id="title">
+				Stocks Have Feelings
+			</div>
+			<div id="subtitle">
+				Discover public sentiment towards stocks
+			</div>
+
+			<div id="stock_search">
+				<input id="stock_name" type="text" placeholder="Search for a stock...">
+				<a href="templates/stock.html">
+					<img id="right_arrow" src="img/right_arrow.svg">
+				</a>
+			</div>
+
+			<div class="separator">
+				<img src="img/or_separator.svg">
+			</div>
+
+			<div id="select_prompt">
+				Select an industry
+			</div>
+
+			<div id="industries">
+				<img class="industry" id="energy" src="img/energy.svg">
+				<img class="industry" id="finance" src="img/finance.svg">
+				<img class="industry" id="healthcare" src="img/healthcare.svg">
+				<img class="industry" id="technology" src="img/technology.svg">
+				<img class="industry" id="transportation" src="img/transportation.svg">
+			</div>
+		</div>
+
+		<div id="loading">
+				<div id="logo">
+					<img src="img/logo.svg" />
+				</div>
+			</div>
+	</body>
+</html>

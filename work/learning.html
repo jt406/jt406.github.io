@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="sentiment">
+                    <div class="icon" id="bulb">
+                        <img src="../img/bulb.svg" />
+                    </div>
+                </div>
+
+                <span class="title">Always Learning</span>
+                <br>
+                <span class="subtitle">Helping MongoDB University students keep track of their course progress.</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>Each course in MongoDB University has a syllabus and progress page. The syllabus page shows a list of the chapter sections that make up the course, and the progress page shows students their current grades in the course.
+                <br><br>
+                    <img class='shadow' src='../img/learning/existing_syllabus.jpeg' />
+                <br>
+                    <img class='shadow' src='../img/learning/existing_progress.jpeg' />
+                <br><br>
+               However, the MongoDB University team had been receiving numerous complaints from users' feedback-  which should have been addressed by these pages. Examples of common feedback included:
+                <br><br>
+                <ul>
+                    <li><span class="header">"I want to do well in the course, but I don't know how the grades work."</span></li>
+                    <li><span class="header">"I can't keep up with the course. There's so many assignments going on."</span></li>
+                </ul>
+                <br>My product manager and I came up with a design-driven plan to investigate these issues and redesign a syllabus and progress page. The overall goal was to address the users' problems, decrease the number of user complaints, and ultimately increase user engagement and retainment for business.
+                </span>
+                <span class='heading'>Logistics</span>
+                <span class='body'>
+                <ul>
+                    <li><span class="header">Project Type</span>: Internship</li>
+                    <li><span class="header">Team</span>: 1 Designer, 1 Product Manager, 1 Developer</li>
+                    <li><span class="header">My Roles</span>: Research, Interaction Design, Data Visualizing, User Testing</li>
+                    <li><span class="header">Time Span</span>: 5 Weeks </li>
+                </ul>
+                </span>
+                <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img class='design-process' src='../img/learning/design_process.svg' />
+                </span>
+                <span class='heading'>Research</span>
+                <span class='body'>To learn more about how users currently interact with the syllabus and progress pages and empathize with their paint points, needs, and goals when taking a MongoDB University course, I conducted two research methods at MongoDB World 2018:
+                <br><br>
+                <ul>
+                    <li>Interviews</li>
+                    <li>Card Sorting</li>
+                </ul>
+                <br>
+                For the interviews, 11 users were asked a variety of open-ended questions about the context in which they complete MongoDB courses, their goals when taking courses, and issues with interacting with the syllabus and progress pages. These users primarily consisted of data administrators and developers.
+                <br><br>
+                For the card sorting activity, key pieces of information about courses, such as chapter titles, chapter start dates, and homework grades, were written on cards. They were then asked to organize these cards in order of importance to them.
+                <br><br>
+                After the user research was conducted and the results were synthesized, the main research insights were:
+                <br><br>
+                <ul>
+                    <li><span class="header">Users don't understand how grading works because the existing graphs are unclear.</span></li>
+                    <li><span class="header">Users can't keep up with courses because the assignment listings feel unorganized.</span></li>
+                </ul>
+                </span>
+                <span class='heading'>Ideation and Early Design</span>
+                <span class='body'>Based on the research insights, I set out design guidelines for the redesigned syllabus and progress pages:
+                <br><br>
+                <ul>
+                    <li>Users should be understand their grades and progress.</li>
+                    <li>Users should be able to tell which assignments are due first and easily access them.</li>
+                    <li>Users should have an idea of the content that's being covered in the course.</li>
+                </ul>
+                <br>
+                I then started sketching out different variations of the UI on paper that would address the research-based design guidelines. To decide which designs to choose, I considered usability, efficiency, and feasability through consulting with engineers on my team.
+                <br><br>
+                <ul>
+                    <li>Overall Layout</li>
+                    <img src='../img/learning/ideation_layout.jpg' />
+                    I decided to go with A so that users have the option to quickly see an overview or dive into the details of the course. I also felt that horizontal orientation of the overview section would scale content well.
+                    <br><br>
+                    <li>Chapter Breakdown</li>
+                    <img src='../img/learning/ideation_chapters.jpg' />
+                    I decided to go with B so that users would first see the chapters that are currently available and thus require immediate attention, followed by upcoming and past chapters - all through a single page at a glance.
+                    <br><br>
+                    <li>Course Progress</li>
+                    <img src='../img/learning/ideation_progress.jpg' />
+                    I decided to go with B because it felt the most compact and also had room in the middle to show a simple, large progress percentage.
+                    <br><br>
+                    <li>Grades</li>
+                    <img src='../img/learning/ideation_grades.jpg' />
+                    I went with a simplified version of A with only showing an overall grade to avoid complexity and keep things simple. There would be an option to flip over the visualization and reveal a detailed breakdown.
+                </ul>
+
+                <br>
+                After some further ideation and trade-off analysis, I finally wove my designs together into a coherent wireframe:
+                <br><br>
+                    <img src='../img/learning/wireframe.jpg' />
+                <br><br>
+                Firstly, the syllabus and progress pages were combined into a single page. The rationale behind this design decision was that many of the requested user tasks were similar to one another and could thus accomplished in a unified, hybrid design layout with hybrid elements from both former pages.
+                <br><br>
+                The top section shows a description of the course and an overview of the students' progress and grades, so students can instantly see a high-level picture of how they're doing in the course.
+                <br><br>
+                The user can also see a breakdown of the chapters they're currently working as well as the ones they finished and yet to finish. Chapters in progress are placed towards the top so that users can see them first.
+                <br><br>
+                Progress was chosen to be represented using "x of y" and grades using "x%" to help differentiate them from  one another. Moreover, the progress' fractions were meant to emphasize current completion, while the grades' percentages were meant to reflect traditinonal grading systems.
+                </span>
+                <span class='heading'>Peer Review and Design Critique</span>
+                <span class='body'>After the wireframes were created, a peer review with my engineering team and design critique with my design team were conducted to gather input on the initial designs. 
+                <br><br>
+                To present the wireframes to my peers, the user tasks were first introduced, and then explanations were given regarding how the user tasks could be completed in the wireframe design. 
+                <br><br>
+                The main pieces of feedback were:
+                <br><br>
+                <ul>
+                    <li>The additive grading system seemed discouraging- grades start at 0% and increase towards 100% after completing assignments</li>
+                    <li>The overall grade system isn't transparent- the 50:50 distribution between homework and exams could be more clear</li>
+                    <img src='../img/learning/critique_grades.jpg' />
+                    <li>Chapter weighting should be shown more accurately- percentage grades for each chapter do not show weighted grade values; e.g. chapters with more homeworks should be weighted more heavily</li>
+                    <img src='../img/learning/critique_weight.jpg' />
+                    <li>Expanded chapter content would be too extensive in most realistic circumstances and would thus make the dropdown interfaces very long</li>
+                    <img src='../img/learning/critique_dropdown.jpg' />
+                </ul>
+                </span>
+                <span class='heading'>Updated Design</span>
+                <span class='body'>Based on the feedback from the internal evaluation sessions, several changes were made to the design. To stay on track to meet deadlines, I created the updated design in high-fidelity using <a href='http://mongodb.design/' target='_blank'>MongoDB's design system</a>.
+                <br><br>
+                <!-- The wireframes were promptly moved forwards towards high-fidelity design using the MongoDB University design system due to project timeline constraints. 
+                <br><br> -->
+                The updated design changes that were implemented include:
+                <br><br>
+                <ul>
+                    <li>Replaced the overall grade percentage with a data visualization that showed grading category breakdowns, which was homework as 50% and the exam as 50%</li>
+                    <img src='../img/learning/updated1_grades.png' />
+                    <li>Replaced the chapter grade percentages with correct and incorrect badges to show the graded weight; i.e. more badges for a chapter means greater impact on the overall grade</li>
+                    <img src='../img/learning/updated1_weight.png' />
+                    <li>Removed the accordion dropdown and changed the interaction of clicking on a chapter to navigating to the course page itself, which already shows an outline of the chapter</li>
+                </ul>
+                <br>
+                Next, the mockups were connected together to create <a target="_blank" href="https://mongodb.invisionapp.com/share/5AN4DGQNFKS#/screens">an Invision prototype, which can be accessed here.</a>
+                <br><br>
+                    <a class='image' target="_blank" href="https://mongodb.invisionapp.com/share/5AN4DGQNFKS#/screens">
+                        <img class='shadow' src='../img/learning/mockup_circle.png' />
+                    </a>
+                <br>
+                </span>
+                <span class='heading'>User Testing</span>
+                <span class='body'>
+                After creating the prototype based on the updated designs, user testing was conducted over Zoom video meetings with 11 external users, who consisted of both database administrators and developers.  The main goals of the user testing were to:
+                <br><br>
+                <ul>
+                    <li>Determine whether users would be able to complete the user tasks</li>
+                    <li>Gather any other input they may have, such as whether the user tasks accurately reflect their needs and goals</li>
+                </ul>
+                <br>
+                The user testing methods used included: 
+                <br><br>
+                <ul>
+                    <li>Think aloud task walkthrough</li>
+                    <li>Follow-up interviews</li>
+                </ul>
+                <br>
+                Users were given a scenario as context and then asked to perform tasks in the prototype based on the scenario.
+                An example of a task scenario was having the user imagine that they have a busy schedule and then asking them to try to determine the amount of coursework they need to finish by a certain deadline.
+                <br><br>
+                After each of these tasks, users were asked follow-up questions about their decision making.
+                <br><br>
+                The results were analyzed, and the main user testing insights were:
+                <br><br>
+                <ul>
+                    <li>Users could tell what the course was about, but would still like a brief written description of the course instead of having to inspect the chapter titles</li>
+                    <li>Users had trouble determining how the course's total duration</li>
+                    <li>Only about half of the users understood the overall grade visualization</li>
+                    <li>Users liked the badge visualization for graded lessons because they could see the number of graded lessons and the current grade of each lesson</li>
+                    <li>Users expected to receive about a recommendation of next steps after completing a course, such as taking another related course or reading related documentation</li>
+                </ul>
+                </span>
+                <span class='heading'>Updated Design</span>
+                <span class='body'>
+                Based on the user testing results, several design iterations were made: 
+                <br><br>
+                <ul>
+                    <li>Replaced the semi-circle grade visualization with a bar chart, which features clear titles for the grading categories- homeworks and the exam</li>
+                        <img src='../img/learning/updated2_grades.png' />
+                    <li>Added recommendations for similar courses and related readings for users who have completed the course</li>
+                        <img src='../img/learning/updated2_next.png' />
+                    <li>Added a course description to the top overview section so that users can read a brief summary of the course</li>
+                    <li>Added the course duration to the overview section before a course has begun, so users can determine a course's time commitment without having to browse each chapter's dates and calculate the total duration</li>
+                    <li>Unified the tooltip styles under a commonly used tooltip style from the MongoDB design system</li>
+                </ul>
+                <br>
+                The updated designs were then connected together to create <a href="https://mongodb.invisionapp.com/share/7ENG88FBCZP" target="_blank">the latest Invision prototype</a> for future user testing sessions.
+                <br><bR>
+                    <a class='image' href="https://mongodb.invisionapp.com/share/7ENG88FBCZP" target="_blank">
+                        <img class='shadow' src='../img/learning/mockup_bars_middle.png' />
+                    </a>
+                <br>
+                    <a class='image' href="https://mongodb.invisionapp.com/share/7ENG88FBCZP" target="_blank">
+                        <img class='shadow' src='../img/learning/mockup_bars_end.png' />
+                    </a>
+                <br>
+                </span>
+                <span class='heading'>Impact and Next Steps</span>
+                <span class='body'>
+                At this point in the project, it was early August, and my internship was coming to an end. Fortunately, my team and I made significant progress over the previous 5 weeks. 
+                <br><br>
+                We were able to identify our users' problems and iteratively design solutions for them. The qualitative and quantitative results from users validated our progress, and we felt confident moving forward that the new designs would improve users' experience and ultimately increase user engagement.
+                <br><br>
+                Regarding next steps, the designs are currently undergoing final user testing and design iterations. The implementation of the final design deliverables are scheduled to be completed by Q3 2019.
+                <br><br>
+                In the meantime, <a href="https://mongodb.invisionapp.com/share/7ENG88FBCZP" target="_blank">the latest Invision prototype of the updated design can be found here.</a>
+                </span>
+            </div>
+
+            <div id="project_nav">
+                <a href="signup.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">3, 2, 1, Blast Off!</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="28px" viewBox="0 0 40 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-pointing-to-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-860.000000, -501.000000)">
+        <g id="Search" transform="translate(600.000000, 486.000000)" fill="#636361" fill-rule="nonzero">
+            <g id="arrow-pointing-to-right" transform="translate(260.000000, 15.000000)">
+                <path d="M39.430632,12.5765056 L27.5347212,0.680594796 C26.8089219,-0.045204461 25.6318216,-0.045204461 24.9060223,0.680594796 C24.1800743,1.40654275 24.1800743,2.58334572 24.9060223,3.30929368 L33.6288476,12.032119 L1.85873606,12.032119 C0.832267658,12.032119 0,12.8643866 0,13.890855 C0,14.9171747 0.832267658,15.7495911 1.85873606,15.7495911 L33.6288476,15.7495911 L24.9063197,24.4724164 C24.1803717,25.1983643 24.1803717,26.3751673 24.9063197,27.1011152 C25.269145,27.4637918 25.7449814,27.6455019 26.2206691,27.6455019 C26.6963569,27.6455019 27.1720446,27.4637918 27.5350186,27.1011152 L39.430632,15.2052045 C40.1565799,14.4792565 40.1565799,13.3024535 39.430632,12.5765056 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

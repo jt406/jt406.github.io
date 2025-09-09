@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="pizza">
+                    <div class="icon" id="slice">
+                        <img src="../img/slice.svg" />
+                    </div>
+                </div>
+
+                <span class="title">Let's Order Some Pizza</span>
+                <br>
+                <span class="subtitle">Improving the experience of ordering pizza</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>Pizza is one of the most popular foods in Western culture. Thousands of people order pizza every day.
+                <br><br>
+                While many pizza services have recently updated their app and web interfaces to increase usability and promote sales, there still exists many lingering usability issues which can be improved upon.</span>
+                <br>
+                <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img src='../img/Pizza/design_process.png' />
+                </span>
+                <span class='heading'>Research</span>
+                <span class='body'>To learn more about the usability issues that users tend to face when ordering pizza online, several people who frequently ordered pizza were interviewed. 
+                <br><br>
+                In addition, several existing pizza-delivery apps were analyzed in order to take a closer look at their user experiences. These apps included: Slice, Papa Johns, Pizza Hut, and Dominoes.
+                <br><br>
+                After the interviews and studies were conducted and synthesized, user research and heuristic analysis on the apps suggested that an enjoyable, intuitive pizza-ordering experience typically included:
+                <br><br>
+                <ul>
+                    <li>Pictures of food</li>
+                    <li>Minimal visual clutter</li>
+                    <li>Guided interaction flow with few steps</li>
+                    <li>Delivery status tracking</li>
+                </ul></span>
+                <span class='heading'>Early Design</span>
+                <span class='body'>The process of ordering of a pizza was broken down into three tasks: 
+                <br><br>
+                <ul>
+                    <li>Selecting the pizza</li>
+                    <li>Checking out with food</li>
+                    <li>Monitoring the delivery status</li>
+                </ul>
+                <br>
+                After creating an overall interaction flow, several features were incorporated to address the usability guidelines from the user research: 
+                <br><br>
+                <ul> 
+                    <li>Each ingredient listing includes an image of the ingredient</li>
+                    <li>An updating image of the pizza shows the current toppings in the customization phase</li>
+                    <li>Delivery screen conveys the pizza's status and estimated delivery time</li>
+                </ul>
+                <br>
+                <img id="sketch" onclick="summon(this.id)" src="../img/Pizza/Sketch.png" />
+                <img id="blockframe" onclick="summon(this.id)" src="../img/Pizza/Blockframe.png" />
+                <img id="wireframe" onclick="summon(this.id)" src="../img/Pizza/Wireframe.png" /></span>
+                <span class='heading'>User Testing</span>
+                <span class='body'>After the early design mock ups were created, user testing was conducted to collect feedback from users. A low-fidelity prototype was created using Invision, and users were asked to perform a benchmark task of ordering a specific pizza.
+                <br><br>
+                For the task, users were split into two groups. One group participated in a think-aloud activity, while the other group performed the activity silently on their own. 
+                <br><br>
+                Observations and feedback from the user testing revealed:
+                <br><br>
+                <ul>
+                    <li>Pictures of ingredients allowed users to quickly identify ingredients</li>
+                    <li>Updating pizza image helped users to keep track of selected toppings</li>
+                    <li>Buttons for half-pie ingredients were too closely located together</li>
+                    <li>Inability to skip pizza customization slowed down the overall ordering process</li>
+                </ul></span>
+                <span class='heading'>Iterated Design</span>
+                <span class='body'>In the interated design phase, several design changes were made to address the findings from the user testing:
+                <br><br>
+                <ul>
+                    <li> Established a visual language for interactivity </li>
+                    <li> Increased navigation flexibility by offering the option to skip through pizza customization</li>
+                    <li> Spaced out customization buttons to be more accessible</li>
+                </ul>
+                <br>
+                <img id="iterated" onclick="summon(this.id)" src="../img/Pizza/Iterated.png" />
+                <br><br>
+                For future design iterations, there would be an emphasis on addressing other common themes from the user testing feedback, such as:
+                <br><br>
+                <ul>
+                    <li>Navigation flexibility to skip forwards or backwards in the overall ordering process</li>
+                    <li>Exploration of in-depth delivery tracking with GPS or live-streaming</li>
+                </ul></span>
+            </div>
+
+            <div id="project_nav">
+                <a href="money.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">Where's My Money?</span>
+                    </span>
+                </a>
+                <a href="sentiment.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Stocks Having Feelings</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+        <div class="overlay" id="sketch" onclick="disappear(this.id)">
+            <img src="../img/Pizza/Sketch.png" />
+        </div>
+        <div class="overlay" id="blockframe" onclick="disappear(this.id)">
+             <img src="../img/Pizza/Blockframe.png" />
+        </div>
+        <div class="overlay" id="wireframe" onclick="disappear(this.id)">
+             <img src="../img/Pizza/Wireframe.png" />
+        </div>
+        <div class="overlay" id="iterated" onclick="disappear(this.id)">
+             <img src="../img/Pizza/Iterated.png" />
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>

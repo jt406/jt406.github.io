@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>microsoft</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-398.000000, -699.000000)">
+        <g id="Group-4-Copy-7" transform="translate(396.000000, 680.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(2.000000, 0.000000)">
+                <g id="microsoft" transform="translate(0.000000, 19.000000)">
+                    <path d="M12.21875,10.78125 L23,10.78125 L23,0.71875 C23,0.322 22.678,0 22.28125,0 L12.21875,0 L12.21875,10.78125 Z" id="Shape" fill="#4CAF50"></path>
+                    <path d="M10.78125,10.78125 L10.78125,0 L0.71875,0 C0.322,0 0,0.322 0,0.71875 L0,10.78125 L10.78125,10.78125 Z" id="Shape" fill="#F44336"></path>
+                    <path d="M10.78125,12.21875 L0,12.21875 L0,22.28125 C0,22.678 0.322,23 0.71875,23 L10.78125,23 L10.78125,12.21875 Z" id="Shape" fill="#2196F3"></path>
+                    <path d="M12.21875,12.21875 L12.21875,23 L22.28125,23 C22.678,23 23,22.678 23,22.28125 L23,12.21875 L12.21875,12.21875 Z" id="Shape" fill="#FFC107"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

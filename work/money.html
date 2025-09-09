@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="money">
+                    <div class="icon" id="cash">
+                        <img src="../img/cash.svg" />
+                    </div>
+                </div>
+
+                <span class="title">Where's My Money?</span>
+                <br>
+                <span class="subtitle">Helping young adults keep track of their spending budget</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>
+                Many adolescences often find themselves suddenly flung into the adult world of financial independence. One of challenges of becoming financially independent is learning to manage one's personal finances.</span>
+                <span class='heading'>Logistics</span>
+                <span class='body'>
+                <ul>
+                    <li><span class="header">Project Type</span>: Side Project</li>
+                    <li><span class="header">Team</span>: 1 Designer</li>
+                    <li><span class="header">My Roles</span>: Research, Visual Design</li>
+                    <li><span class="header">Time Frame</span>: 2 Weeks </li>
+                </ul>
+                </span>
+                <!-- <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img src='../img/Money/design_process.png' />
+                </span> -->
+                <span class='heading'>Research</span>
+                <span class='body'>To learn more about the challenges of becoming financially independent, several young adults were interviewed. After analysis of the interviews, it was found that many young adults often:
+                <br><br>
+                <ul>
+                    <li>Underestimate their expected monthly spendings, leading to overspending</li>
+                    <li>Maintain a general idea of their spendings, but do not formally record their spending activity in detail</li>
+                    <li>Believe that keeping track of their spending activity seems time-consuming and troublesome</li> 
+                </ul>
+                </span>
+                <span class='heading'>Design</span>
+                <span class='body'>As a result of the research, the project goal became to create a user experience that helps young adults track their spending activity in an intuitive, hassle-free manner. 
+                <br><br>
+                Managing one's spending activity was synthesized into two main tasks: 
+                <br><br>
+                <ul>
+                    <li>Monitoring past spending activity</li>
+                    <li>Recording recent transactions</li>
+                </ul>
+                <br>
+                <img id="sketch" onclick="summon(this.id)" src="../img/Money/Sketch.jpg" />
+                <img id="wireframe" onclick="summon(this.id)" src="../img/Money/Wireframe.png" />
+                <br>
+                When opening the app, users first see a spending overview, which displays: 
+                <br><br>
+                <ul>
+                    <li>Total amount spent</li>
+                    <li>Spending trends over time</li>
+                    <li>Amount spent for each spending category, such as food, gas, or entertainment</li> 
+                </ul>
+                <Br>
+                If users would like to explore their spending history in detail, they're able to navigate to a spending history that shows a list of individual transactions.
+                <br><br>
+                <img id="mockup" onclick="summon(this.id)" src="../img/Money/Mockup.png" />
+                <br><br>
+                Furthermore, it was important for recording transactions to feel effortless and streamlined in order to encourage usage throughout the day. The process of recording a transaction was simplified into two short steps:
+                <br><br>
+                <ul>
+                    <li>Selecting a spending category</li>
+                    <li>Entering the amount spent</li> 
+                </ul>
+                <br>
+                Ideally, recording a transaction would take no longer than a minute. The user can also add additional information, such as a description of the purchase and a time log.
+                <br><br>
+                The project was designed for a mobile app platform to facilitate frequent, on-the-go usage. Ideally, users would be able to easily record their transactions and monitor their overall spending as they go about their day.
+            </span>
+            </div>
+
+            <div id="project_nav">
+                <a href="messing.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">Just Messing Around</span>
+                    </span>
+                </a>
+                <a href="sentiment.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Stocks Have Feelings</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div class="overlay" id="sketch" onclick="disappear(this.id)">
+            <img src="../img/Money/Sketch.jpg" />
+        </div>
+        <div class="overlay" id="wireframe" onclick="disappear(this.id)">
+             <img src="../img/Money/Wireframe.png" />
+        </div>
+        <div class="overlay" id="mockup" onclick="disappear(this.id)">
+             <img src="../img/Money/Mockup.png" />
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>

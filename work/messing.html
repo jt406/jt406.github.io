@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="d3">
+                    <div class="icon" id="graph">
+                        <img src="../img/flask.svg" />
+                    </div>
+                </div>
+
+                <span class="title">Just Messing Around</span>
+                <br>
+                <span class="subtitle">Experimenting with design trends for miscellanenous interfaces.</span>
+                <br>
+                <span class='heading'>Display Settings</span>
+                    <span class="body"><img id="settings" onclick="summon(this.id)" src="../img/d3/settings.png" /></span>
+
+                <span class='heading'>User Profile</span>
+                    <span class="body"><img id="profile" onclick="summon(this.id)" src="../img/d3/profile.png" /></span>
+
+                <span class='heading'>Status Update</span>
+                    <span class="body"><img id="success_error" onclick="summon(this.id)" src="../img/d3/success_error.png" /></span>
+
+                <span class='heading'>Product Profile</span>
+                    <span class="body"><img id="product" onclick="summon(this.id)" src="../img/d3/product.png" /></span>
+
+                <span class='heading'>Agency Landing Page</span>
+                    <span class="body"><img id="landing" onclick="summon(this.id)" src="../img/d3/landing.png" /></span>
+            </div>
+
+            <div id="project_nav">
+                <a href="../index.html">
+                    <span class="next">Go to
+                        <br>
+                        <span class="title">Home Page</span>
+                    </span>
+                </a>
+                <a href="money.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Where's My Money?</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div class="overlay" id="settings" onclick="disappear(this.id)">
+            <img src="../img/d3/settings.png" />
+        </div>
+        <div class="overlay" id="profile" onclick="disappear(this.id)">
+             <img src="../img/d3/profile.png" />
+        </div>
+        <div class="overlay" id="success_error" onclick="disappear(this.id)">
+             <img src="../img/d3/success_error.png" />
+        </div>
+        <div class="overlay" id="product" onclick="disappear(this.id)">
+             <img src="../img/d3/product.png" />
+        </div>
+        <div class="overlay" id="landing" onclick="disappear(this.id)">
+             <img src="../img/d3/landing.png" />
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>  

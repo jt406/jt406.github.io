@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="d3">
+                    <div class="icon" id="rocket">
+                        <img src="../img/rocket.svg" />
+                    </div>
+                </div>
+
+                <span class="title">3, 2, 1, Blast Off!</span>
+                <br>
+                <span class="subtitle">Redesigning the MongoDB University sign-up experience to motivate new users to create an account.</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>During my internship with MongoDB, my product manager and I saw an opportunity to improve the existing MongoDB University sign-up page with the goal of increasing user conversion rates. 
+                <br><br>
+                    <img class='shadow' src='../img/signup/existing.png' />
+                <br><br>
+                Based on anecdotal assumptions, we identified the lengthy sign-up form, which consisted of 16 different fields and inputs, as a usability issue that overwhelmed users and deterred some of them from signing up for a MongoDB University account.
+                <br><br>
+                I took the initiative to lead a redesign of the sign-up page by creating an appealing experience that would motivate more new users to join MongoDB University.
+                
+                <br>
+                </span>
+                <span class='heading'>Logistics</span>
+                <span class='body'>
+                <ul>
+                    <li><span class="header">Project Type</span>: Internship</li>
+                    <li><span class="header">Team</span>: 1 Designer, 1 Product Manager, 2 Developers</li>
+                    <li><span class="header">My Roles</span>: Research, Interaction Design, User Testing</li>
+                    <li><span class="header">Time Frame</span>: 3 Weeks </li>
+                </ul>
+                </span>
+                <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img class='design-process' src='../img/signup/design_process.svg' />
+                </span>
+                <span class='heading'>Research</span>
+                <span class='body'>To learn more about the existing problems of the current sign-up page as well as best practices for sign-up pages in general, several specific research goals were set out:
+                <br><br>
+                <ul>
+                    <li>Confirm that there are usability problems with the existing sign-up experience</li>
+                    <li>Learn about the usability problems and users' pain points</li>
+                    <li>Learn about user's expectations of a positive sign-up experience</li>
+                    <li>Research other sign-up pages from popular web apps</li>
+                    <li>Investigate the common qualities or characteristics of effective sign-up pages</li>
+                </ul>
+                <br>
+                To achieve these learning goals, several research methods were conducted: 
+                <br><br>
+                <ul>
+                    <li>User interviews</li>
+                    <li>Competitive analysis</li>
+                    <li>Literature review</li>
+                </ul>
+                <br>
+                For the user interviews, 6 different users who had recently signed up for MongoDB University in the past week were interviewed. The interview questions focused on learning about users' experiences with signing up for MongoDB University as well as their expectations of a positive sign-up experience.
+                <br><br>
+                Regarding competitive analysis, sign-up pages from popular user-facing products were studied using heuristic evaluations. Some of the products included Yelp, Dropbox, Facebook, Airbnb, Github, and Google.
+                <br><br>
+                For literature review, several articles by UX bloggers who also designed sign-up pages were reviewed. Many of these designers wrote about best practices for sign-up pages based on their own experiences.
+                <br><br>
+                After conducting these research methods, the main research insights that were gathered were:
+                <br><br>
+                <ul>
+                    <li>The existing MongoDB sign-up page had <span class="header">several usability problems</span>: overwhelming number of input fields, inapplicable fields, such as "programming language" for non-coders, irrelevant personal fields, such as "home address", and accidentally navigating to sign-up instead of sign-in, vice versa</li>
+                    <li>The primary stakeholder groups consisted of <span class="header">software developers and database administrators</span></li>
+                    <li>Sign-up interfaces should be: <span class="header">simple and short</span>, relevant to the product, playful, <span class="header">memorable, persuasive in terms of showing value proposition</span>, and responsive to user input</li>
+                    <li>Sign-up interfaces should not be: <span class="header">long, confusing, intrusive, or exclusive</span> with regards to catering only towards narrow user groups</li>
+                </ul>
+                </span>
+                <span class='heading'>Ideation and Early Design</span>
+                <span class='body'>Based on the research insights, several design criteria were determined to help guide the design of the new MongoDB University sign-up page: 
+                <br><br>
+                <ul>
+                    <li><span class="header">Short, concise</span>: include the minimal number of fields necessary and hide/simplify information if possible to increase approachability</li>
+                    <li><span class="header">Interactive, responsive</span>: show immediate feedback for validated fields and error fields, caps lock, etc., and fedback messages next to corresponding fields</li>
+                    <li><span class="header">Informative</span>: show password requirement and field labels</li>
+                    <li><span class="header">Persuasive</span>: sell a value proposition and convince users to join base on XYZ reasons</li>
+                    <li><span class="header">Playful, emotional</span>: use colors or imagery to evoke a playful mood</li>
+                </ul>
+                <br>
+                Next, several different UI ideas of the sign-up and log-in pages were brainstormed. Each of these UI designs addressed the design criteria to varying degrees:
+                <br><br>
+                    <img src='../img/signup/ideation.jpg' />
+                <br><br>
+                <ul>
+                    <li>Design A explores the idea of a <span class="header">ultra minimalist sign-up</span> page in which users would only need to enter their email, which would significantly lower the barrier of entry. Users would then be asked to create the rest of their account through email.</li>
+                    <li>Design B features a <span class="header">common, streamlined sign-up page design</span> featuring only the necessary fields. This design is aimed towards users who want frictionless sign-up page that gets out of their way.</li>
+                    <li>
+                    Design C focuses on catching the user's eye by also showcasing a playful <span class="header">branded illustration</span> and offering persuasive <span class="header">reasons to join</span>.</li>
+                </ul>
+                <br>
+                While Design A's single field sign-up form was straightfoward in theory, my product manager and I decided to move past the idea because we thought the unconventional single field form may be confusing and the experience of switching back-and-forth between email would be inconvenient.
+                <br><br>
+                Between Design B and C, we moved forward with <span class="header">Design C</span> because we wanted our sign-up page to feel <span class="header">unique and persuasive</span> so that users would feel attracted to MongoDB University's <span class="header">value proposition</span>.
+                <br><br>
+                In addition, my product manager and I were able to compromise to reduce the number of required sign-up inputs from 16 to 8. This decision would streamline the user experience while still allowing for collection of user data for SalesForce on the business end.
+                <br><br>
+                Next, I created user task flows to understand how the sign-up page would function at a high level. This process helped me to identify 3 main tasks: registration, sign-in, and switching back-and-forth. 
+                <br><Br>
+                <img src='../img/signup/task_flow.jpg' />
+                <br><br>
+                To support the last task, which addresses the use case of users accidentally navigating to sign-up or sign-in, I included an interactive toggle label for switching between the two. I also split the sign-up fields into two sections to make the sign-up flow feel more digestible in smaller chunks.
+                <br><br>
+                These wireframes were then used to design <a  target="_blank" href="https://mongodb.invisionapp.com/share/FJKO85JHS38#/screens"> a medium-fidelity Invision prototype of the new MongoDB University sign-up page.</a> 
+                <br><br>
+                	<img class='shadow' src='../img/signup/wireframe.png' />
+                <br>
+                </span>
+                <span class='heading'>User Testing</span>
+                <span class='body'>After a medium-fidelity prototype was created, user testing was conducted to learn about how well, if at all, users would be able to perform the primary use case tasks using the new sign-up interface.
+                <br><br>
+                The user tests were conducted at medium-fidelity rather than high-fidelity so that feedback could be gathered earlier and that there could be a focus on designing core functionalities of the interface before addressing visual design polish.
+                <br><br>
+                The main learning goals of the user testing were to:
+                <br><br>
+                <ul>
+                    <li>Learn about users' first impressions</li>
+                    <li>Observe users complete the benchmark tasks: create a new account, sign in with an existing account, and recover password</li>
+                    <li>Learn about users' thoughts and feelings as they move through each step of the task</li>
+                    <li>Learn about users' pain points, confusions, or errors</li>
+                    <li>Learn about what the user would like to change, add, or remove</li>
+                </ul>
+                <br>
+                Each user testing session consisted of a <span class="header">task walkthrough and follow-up interview</span> to learn more about the users' decisions. A total of 6 user tests were conducted. However, due to time constraints, only software developers were recruited for these sessions. A future improvement would be to also recruit database administrators in order to more accurately represent the diverse stakeholder groups.
+                <br><br>
+                After conducting qualitative coding and quantitative analysis on the user testing results, the main testing insights revealed that:
+                <br><br>
+                <ul>
+                    <li>Many users' first impressions of the sign-up page were that it was <span class="header">short, simple, and straightforward</span></li>
+                    <li>All the users were able to <span class="header">complete each task with little to no difficulty</span></li>
+                    <li>Users had a hard time visualizing the illustration and <span class="header">wished to see a  sample illustration</span>. From this, I learned that it's okay to include images if they're an essential part of the prototype.</li>
+                    <li>Users liked the UI elements that showed responsive feedback, such as check marks for fields</li>
+                    <li>Users recommended some UI tweaks, such as returning to sign-in after password recovery, greying out continue buttons until fields have been completed, and auto-filling the email field in password recovery based on past sign-in attempts</li>
+                </ul>
+                </span>
+                <span class='heading'>Updated Design</span>
+                <span class='body'>Based on the results from the user testing sessions and a meeting with my product manager, several changes were made:
+                <br><br>
+                <ul>
+                    <li>Condensed the sign-up to a <span class="header">single page format</span> from a double page format to allow users to see all the fields at once; my PM showed me research that showed users prefer the transparency of single pages - <span class="header">performing A/B testing to learn which users prefer would've been useful in hindsight</span></li>
+                    <li>Improved flow for password recovery by updating a button to return to sign-in</li>
+                    <li>Increased UI responsiveness by showing the "continue" button as accessible only after the form had been completed</li>
+                    <li>Increased convenience for password recovery by auto-completing email input</li>
+                </ul>
+                <br>
+                Based on positive feedback and the project timeline, I moved the design foward to high-fidelity using the <a href='http://mongodb.design' target='_blank'>MongoDB design system</a>.
+                <br><br>
+                    <img class='shadow' src='../img/signup/signup_mockup.jpeg' />
+                <br><br>
+                The colorful illustration conveys a sense of playfulness that promotes the positive mood of the MongoDB University brand. Moreover, the three selling points represent a value propositions for new users.
+                <br><br>
+                    <img class='shadow' src='../img/signup/signin_mockup.jpeg' />
+                <br><br>
+                The design also features an emphasized, interactive label titled "Get Started" or "Sign In" that allows users to toggle back and forth between the sign-in and getting started pages. This feature addresses the scenario in which users accidentally navigated to one page instead of the other. 
+                <br><br>
+                After the high-fidelity mockups were created and approved, <a  target="_blank" href="https://mongodb.invisionapp.com/share/74L29WIBQDU#/screens">an Invision prototype</a> was delivered to the MongoDB University platform development team to implement the front-end redesign.
+                </span>
+                <span class='heading'>Impact and Ending Thoughts</span>
+                <span class='body'>
+                    Meanwhile, it was two weeks before MongoDB World 2018, a global developer conference. We noticed that we were very close to surpassing 1,000,000 registered users and made a goal to surpass it before the event.
+                    <br><br>
+                    Because my redesign hadn't been implemented yet, we borrowed elements from my design to improve the existing sign-up design, such as <span class="header">reducing the number of fields from 16 to 8</span>. Two weeks later, the night before World, we were able to hit our <span class="header">milestone of 1,000,000 registered users</span>!
+                    <br><br>
+                    Fast foward to December 2018, the <a  target="_blank" href="https://university.mongodb.com/signup">redesigned sign-up page</a> was shipped to the home page. I noticed some design discrepancies between the mock-ups and the live version, but I'm content overall that my work saw the light of day after my internship.
+                    <br><br>
+                    This was the first project I completed at MongoDB, and I felt very proud of my team's execution. We were able to identify users' problems and address their needs by following a data-driven design process. Moving foward, I'm very curious to see <span class="header">if the new sign-up metrics are validating the design's effectiveness</span>. Only time will tell!
+                </span>
+            </div>
+
+            <div id="project_nav">
+                <a href="pocketdoc.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">What's Up, Doc?</span>
+                    </span>
+                </a>
+                <a href="learning.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Always Learning</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function explain_rating()
+        {
+            document.getElementById("rating_explanation").innerHTML = "The sentiment rating system ranged from -1 to 1, where a rating of -1 represents the most negative sentiment, 0 represents neutral sentiment, and 1 represents the most positive sentiment. This scale was chosen over a tradition 0 to 10 or 0 to 100 scale due to its ability to convey sentiment scores more intuitively. <br><br> In a 0 to 100 scale, high scores are typically interpreted as good and low scores (typically perceived as below 70) as bad. Under this system, a score of 50 or 50% implies a poor score. However, for sentiment rating, 50 would actually mean that the score was perfectly neutral; people have no strong feelings in either direction. As a result, the -1 to 1 range was chosen to minimize misconceptions and support the idea that 0 represents an origin point that aligns with neutral sentiment.";
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>

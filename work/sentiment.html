@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="sentiment">
+                    <div class="icon" id="smiley">
+                        <img src="../img/smiley.svg" />
+                    </div>
+                </div>
+
+                <span class="title">Stocks Have Feelings</span>
+                <br>
+                <span class="subtitle">A research tool for novice stock traders that focuses on conveying public sentiment towards company stocks based on social media</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>Stock trading can seem daunting. When first starting out, new users may feel overwhelmed by the vast number of financial graphs, charts, terminology, and concepts.
+                <br><br>
+                This project attempts to address the problem of promoting millennial engagement in stock trading. More specifically, how can beginners be introduced to the stocks in a simple and intuitive way?</span>
+                <span class='heading'>Logistics</span>
+                <span class='body'>
+                <ul>
+                    <li><span class="header">Project Type</span>:  Side Project</li>
+                    <li><span class="header">Team</span>: 1 Designer</li>
+                    <li><span class="header">My Roles</span>: Research, Interaction Design, Visual Design, User Testing</li>
+                    <li><span class="header">Time Frame</span>: 3 Weeks </li>
+                </ul>
+                </span>
+                <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img class='design-process' src='../img/Sentiment/design_process.svg' />
+                </span>
+                <span class='heading'>Research</span>
+                <span class='body'>The user research targeted novice traders as well as people who had looked into stock trading. The research questions focused on learning more about their attitudes towards stocks and experiences with trading. 
+                <br><br>
+                The research process was split into two phases: 
+                <br><br>
+                <ul>
+                    <li>Collecting data from users and competitors</li>
+                    <li>Aanalyzing the user data to find themes and insights</li>
+                </ul>
+                <br>
+                To collect user data, observations, interviews, and competitive analysis were conducted on 11 users, who consisted of co-workers, friends, and family members. 
+                <br><br>
+                After the data was collected, an affinity diagramming exercise was performed to find themes among the pieces of user data. The main findings revealed that:
+                <br><br>
+                <ul>
+                    <li>Novices feel that there is a barrier of knowledge that makes it difficult to confidently begin stock trading</li>
+                    <li>Novices feel that researching companies and trading stocks in general would take too much of their time</li>
+                </ul>
+                </span>
+                <span class='heading'>Ideation</span>
+                <span class='body'>The main research findings were converted into design criteria to guide the ideation process for brainstorming solutions. The design criteria were as follows: 
+                <br><br>
+                <ul>
+                    <li><span class="header">Informative</span>: The solution should inform users about the basics of the stock market in an intuitive manner, so that they feel confident to begin stock trading</li>
+                    <li><span class="header">Convenient</span>: The solution should feel lightweight and easy to use; users should be able to learn about stocks in short periods of time lasting no longer than a couple minutes</li>
+                </ul>
+                <br>
+                After brainstorming multiple ideas, the elements of the ideas that best addressed the design criteria were synthesized into two main solutions:
+                <br><br>
+                <ul>
+                    <li><span class="header">An educational app</span> that walks users through the basics of stock trading and utilizes active learning to encourage user engagement. For example, the first lesson would be about introducing the definition of a stock, and the second lesson would be how to buy stocks. The user would then be asked buy one stock of their choice in order to move forward.</li>
+                    <li><span class="header">A web-based research tool</span> that presents stocks through the simple context of sentiment ratings. Sentiment ratings represent the general public's feelings towards a company's stock. These sentiment ratings are generated by analyzing news articles and social media. Users can use sentiment scores to predict changes in stock price. For example, if the general public feels that a certain stock is doing very well and act upon that feeling via buying stocks, then the stock's price is likely to rise as well.</li>
+                </ul>
+                <br>
+                Of the two solutions, the sentiment-rating solution was chosen to move forward. 
+                <br><br>
+                After additional competitive analysis, it was found that many similar tutorial-based educational apps already exist. In an effort to avoid repeating existing work, the educational app idea was shelved. 
+                <br><br>
+                Moreover, it was believed that the sentiment-based research tool could help users ease into the world of stock trading by providing them with easy-to-understand, actionable sentiment data.
+                </span>
+                <span class='heading'>Early Design</span>
+                <span class='body'>The early design focused on creating a minimum viable product through rapid prototyping. One of the reasons for keeping the early design lightweight and agile was to output a simple prototype that could then be used to quickly gather early user feedback.
+                <br><br>
+                To create an early design, the main benchmark user task of app was determined: discovering a company stock's sentiment rating. Then the benchmark task was broken down into steps to create a user task flow:
+                <br><br>
+                <ul>
+                    <li>Search for a stock</li>
+                    <li>Understand the sentiment rating</li>
+                </ul>
+                <br>
+                After the task flow was determined, wireframes and mockups that represented steps of the user flow were created in Sketch.
+                <br><br>
+                <span id="rating_explanation" onclick="explain_rating()">Click to learn more about the sentiment rating system.</span>
+                <br><br>
+                <img id="sketch" onclick="summon(this.id)" src="../img/Sentiment/Sketch.jpg" />
+                <div class="img_row">
+                    <img id="early_wireframe_menu" onclick="summon(this.id)" src="../img/Sentiment/early_wireframe_menu.png" />
+                    <img id="early_wireframe_stock" onclick="summon(this.id)" src="../img/Sentiment/early_wireframe_stock.png" />
+                </div>
+                <div class="img_row">
+                    <img id="early_mockup_menu" onclick="summon(this.id)" src="../img/Sentiment/early_mockup_menu.png" />
+                    <img id="early_mockup_stock" onclick="summon(this.id)" src="../img/Sentiment/early_mockup_stock.png" />
+                </div>
+                <span class='heading'>User Testing</span>
+                <span class='body'>For testing the early design, six novice-level stock traders were asked to perform a benchmark task of finding sentiment ratings for various stocks. 
+                <br><br>
+                Users were presented with the names of five stocks and were asked to look up the sentiment scores of at least two of them. The prototype was built using Sketch's prototyping functionality.
+                <br><br>
+                As the users performed the tasks, they were asked to explain their thought process as well as their initial reactions to the interface in real-time. After the task, the users were interviewed to understand their behaviors, thoughts, and feeling and collect any other feedback.
+                <br><br>
+                The main findings from user testing revealed:
+                <br><br>
+                <ul>
+                    <li>Interactions were very simple; searching and getting a result</li>
+                    <li>Sentiment ratings were clear; could tell if a score meant positive or negative</li>
+                    <li>Users weren't sure how to make use of the ratings or what to do in terms of next steps</li>
+                    <li>Users wanted to know more about the background of how user sentiment was determined</li>
+                    <li>Users felt that the tool was good for searching for sentiment ratings of stocks they already knew about but was not as good for exploration of new stocks</li>
+                    <li>Users found themselves wanting to compare the sentiment ratings of multiple companies; hard to keep track of multiple stocks at once</li>
+                </ul>
+                <span class='heading'>Iterated Design</span>
+                <span class='body'>In the iterated design, several user feature tasks were included to address the findings from the user testing:  
+                <br><br>
+                <ul>
+                    <li>Show list of stocks by industry to encourage exploration of new stocks</li>
+                    <li>Compare two or more stocks to allow for contextual analysis</li>
+                    <li>Add stocks to a favorites list to be able to keep track of certain stocks</li>
+                    <li>Read latest news articles about a stock to conduct research on the news sources behind the sentiment rating</li>
+                    <!-- <li>Recommended next steps to give the user actionable directions</li> -->
+                </ul>
+                <img id="task_flow" onclick="summon(this.id)" src="../img/Sentiment/Task_Flow.png" />
+                <br>
+                After determining the task flows and information architecture, corresponding wireframes and mockups were created, resulting in a mockup flow diagram. 
+                <br><br>
+                <img id="mockup_flow" onclick="summon(this.id)" src="../img/Sentiment/Mockup_Flow.png" />
+                <div class="img_row">
+                    <img id="iterated_wireframe_menu" onclick="summon(this.id)" src="../img/Sentiment/iterated_wireframe_menu.png" />
+                    <img id="iterated_wireframe_list" onclick="summon(this.id)" src="../img/Sentiment/iterated_wireframe_list.png" />
+                </div>
+                <div class="img_row">
+                    <img id="iterated_wireframe_favorites" onclick="summon(this.id)" src="../img/Sentiment/iterated_wireframe_favorites.png" />
+                    <img id="iterated_wireframe_compare" onclick="summon(this.id)" src="../img/Sentiment/iterated_wireframe_compare.png" />
+                </div>
+                <div class="img_row">
+                    <img id="iterated_mockup_menu" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_menu.png" />
+                    <img id="iterated_mockup_list" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_list.png" />
+                </div>
+                <div class="img_row">
+                    <img id="iterated_mockup_favorites" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_favorites.png" />
+                    <img id="iterated_mockup_stock" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_stock.png" />
+                </div>
+                <div class="img_row">
+                    <img id="iterated_mockup_compare" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_compare.png" />
+                    <img id="iterated_mockup_news" onclick="summon(this.id)" src="../img/Sentiment/iterated_mockup_news.png" />
+                </div>
+                <span class='heading'>Prototype</span>
+                <span class='body'>
+                To bring the design to life, a simple hotspot-based prototype was built using Sketch's prototyping functionality. The demo can be found below: 
+                <a  target="_blank" href='https://sketch.cloud/s/vRl3M/all/mockups/desktop-hd-copy-2/play'> 
+                    <img class="prototype" src='../img/Sentiment/logo.png' /> 
+                </a>
+                <br>
+                The next step of the prototype is to code a front-end web prototype with real data. Instead of using mocked up data, this prototype would be able to use real sentiment using articles pulled from the NY times and analyzed by IBM's Watson Sentiment API. The technologies needed to create such as prototype include:
+                <br><br>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript (jQuery)</li>
+                    <li>New York Times API</li>
+                    <li>IBM Watson Sentiment API</li>
+                </ul>
+                <br>
+                When the user searches for a stock, the New York Times API will be called and return several news articles about the stock's company. These news articles will then be fed into the Watson sentiment API to calculate an average sentiment rating.</span>
+            </div>
+
+            <div id="project_nav">
+                <a href="money.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">Where's My Money?</span>
+                    </span>
+                </a>
+                <a href="hiker.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Take a Hike</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div class="overlay" id="sketch" onclick="disappear(this.id)">
+            <img src="../img/Sentiment/Sketch.jpg" />
+        </div>
+        <div class="overlay" id="early_wireframe_menu" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/early_wireframe_menu.png" />
+        </div>
+        <div class="overlay" id="early_wireframe_stock" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/early_wireframe_stock.png" />
+        </div>
+        <div class="overlay" id="early_mockup_menu" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/early_mockup_menu.png" />
+        </div>
+        <div class="overlay" id="early_mockup_stock" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/early_mockup_stock.png" />
+        </div>
+        <div class="overlay" id="iterated_wireframe_menu" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_wireframe_menu.png" />
+        </div>
+        <div class="overlay" id="iterated_wireframe_list" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_wireframe_list.png" />
+        </div>
+        <div class="overlay" id="iterated_wireframe_favorites" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_wireframe_favorites.png" />
+        </div>
+        <div class="overlay" id="iterated_wireframe_compare" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_wireframe_compare.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_menu" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_menu.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_list" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_list.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_stock" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_stock.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_favorites" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_favorites.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_compare" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_compare.png" />
+        </div>
+        <div class="overlay" id="iterated_mockup_news" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/iterated_mockup_news.png" />
+        </div>
+         <div class="overlay" id="task_flow" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/Task_Flow.png" />
+        </div>
+        <div class="overlay" id="mockup_flow" onclick="disappear(this.id)">
+             <img src="../img/Sentiment/Mockup_Flow.png" />
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function explain_rating()
+        {
+            document.getElementById("rating_explanation").innerHTML = "The sentiment rating system ranged from -1 to 1, where a rating of -1 represents the most negative sentiment, 0 represents neutral sentiment, and 1 represents the most positive sentiment. This scale was chosen over a tradition 0 to 10 or 0 to 100 scale due to its ability to convey sentiment scores more intuitively. <br><br> In a 0 to 100 scale, high scores are typically interpreted as good and low scores (typically perceived as below 70) as bad. Under this system, a score of 50 or 50% implies a poor score. However, for sentiment rating, 50 would actually mean that the score was perfectly neutral; people have no strong feelings in either direction. As a result, the -1 to 1 range was chosen to minimize misconceptions and support the idea that 0 represents an origin point that aligns with neutral sentiment.";
+            document.getElementById("rating_explanation").style.backgroundColor = "white";
+            document.getElementById("rating_explanation").style.fontStyle = "normal";
+            document.getElementById("rating_explanation").style.fontWeight = "200";
+            document.getElementById("rating_explanation").style.cursor = "default";
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>

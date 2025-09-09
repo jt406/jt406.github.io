@@ -1,9 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+            <div id="hero">
+                <div class="description">How are you doing? I'm</div>
+                <div class="title">Jesse Wu</div>
+                <div class="divider short"></div>
+                <div class="description">I'm a <span class="emphasis">product designer</span> who is passionate about serving people by understanding their needs and delivering delightful, accessible, and intuitive experiences.</div>
+            </div>
+
+            <div id="work">
+                <a href="work/learning.html">
+                    <div class="project" id="sentiment">
+                        <span class="subtitle">Interaction Design</span>
+                        <br>
+                        <span class="title"> Always Learning </span>
+                        <br>
+                        <div class="icon" id="bulb">
+                            <img src="img/bulb.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Helping MongoDB University students keep track of their learnings.</span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <a href="work/signup.html">
+                    <div class="project" id="d3">
+                        <span class="subtitle">Interaction Design</span>
+                        <br>
+                        <span class="title"> 3, 2, 1, Blast Off! </span>
+                        <br>
+                        <div class="icon" id="rocket">
+                            <img src="img/rocket.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Redesigning the MongoDB University sign-up experience. </span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <a href="work/pocketdoc.html">
+                    <div class="project" id="pizza">
+                        <span class="subtitle">Product Design</span>
+                        <br>
+                        <span class="title"> What's Up, Doc? </span>
+                        <br>
+                        <div class="icon" id="pocketdoc">
+                            <img src="img/pocketdoc.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Helping intermural sports players diagnose their injuries. </span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <a href="work/hiker.html">
+                    <div class="project" id="money">
+                        <span class="subtitle">Interaction Design</span>
+                        <br>
+                        <span class="title"> Hiking With Friends </span>
+                        <br>
+                        <div class="icon" id="mountains">
+                            <img src="img/mountains.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Showing nearby hiking trails and connecting hikers with one another.</span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <a href="work/sentiment.html">
+                    <div class="project" id="sentiment">
+                        <span class="subtitle">Product Design</span>
+                        <br>
+                        <span class="title"> Stocks Have Feelings </span>
+                        <br>
+                        <div class="icon" id="smiley">
+                            <img src="img/smiley.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Encouraging millenials to engage in stock-trading. </span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <!-- <a href="work/pizza.html">
+                    <div class="project" id="pizza">
+                        <span class="title"> Let's Order Some Pizza </span>
+                        <br>
+                        <span class="subtitle">Research, Design, Prototype </span>
+                        <br>
+                        <div class="icon" id="slice">
+                            <img src="img/slice.svg" />
+                        </div>
+                        <span class="description"> Improving the experience of buying pizza online. </span>
+                    </div>
+                </a> -->
+
+                <a href="work/money.html">
+                    <div class="project" id="money">
+                        <span class="subtitle"> Visual Design </span>
+                        <br>
+                        <span class="title"> Where's My Money? </span>
+                        <br>
+                        <div class="icon" id="cash">
+                            <img src="img/cash.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Helping young adults keep track of their spending budget. </span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+
+                <a href="work/messing.html">
+                    <div class="project" id="d3">
+                        <span class="subtitle"> Visual Design </span>
+                        <br>
+                        <span class="title"> Just Messing Around </span>
+                        <br>
+                        <div class="icon" id="graph">
+                            <img src="img/flask.svg" />
+                        </div>
+                        <div class="divider short"></div>
+                        <span class="description"> Experimenting with design trends for miscellaneous interfaces. </span>
+                        <div class="explore"><span>Read More</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
 </html>
+

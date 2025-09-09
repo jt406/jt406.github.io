@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css">
+        
+        <title>
+            Jesse Wu
+        </title>
+    </head>
+  
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <a href="../index.html"><img src='../img/back-arrow.svg' />Back to Home</a>
+            </div>
+
+            <div class="case_study">
+                <div class="hero" id="pizza">
+                    <div class="icon" id="pocketdoc">
+                        <img src="../img/pocketdoc.svg" />
+                    </div>
+                </div>
+
+                <span class="title">What's Up, Doc?</span>
+                <br>
+                <span class="subtitle">Helping intermural sports players diagnose their injuries</span>
+                <br>
+                <span class='heading'>Problem</span>
+                <span class='body'>Thousands of college students participate in intermural sports each semester. Inevitably, many players receive injuries on the field. However, players are often uncertain of the nature of the injury and whether they should continue playing.
+                <br><br>
+                This project explores the problem area of injury self-diagnosis in intermural sports and aims to educate players with the injury knowledge so that they can make healthy decisions moving forward.
+                </span>
+                <span class='heading'>Logistics</span>
+                <span class='body'>
+                <ul>
+                    <li><span class="header">Project Type</span>: School</li>
+                    <li><span class="header">Team</span>: 3 Designers, 1 Researcher</li>
+                    <li><span class="header">My Roles</span>: Research, Interaction Design, User Testing</li>
+                    <li><span class="header">Time Frame</span>: 3 Months </li>
+                </ul>
+                </span>
+                <span class='heading'>Design Process</span>
+                <span class='body'>
+                    <img class='design-process' src='../img/pocketdoc/design_process.svg' />
+                </span>
+                <span class='heading'>Research</span>
+                <span class='body'>To learn more about the problems that intermural players face with regards to injury, several interviews were conducted on college-aged intermural athletes. Questions in the interview focused on the players' injury history and how they typically handle injuries. Examples of questions include:
+                <br><br>
+                <ul>
+                    <li>What kinds of injuries have you received on the field, if any?</li>
+                    <li>Have you been unsure of whether you could return to playing?</li>
+                    <li>Have there been instances when you kept on playing and ended up worsening your injury?</li>
+                    <li>Are there personal trainers available?</li>
+                </ul>
+                <br>
+                After the interviews transcripts were analyzed, the takeaways revealed that: 
+                <br><br>
+                <ul>
+                    <li>Many players have received mild injuries, such as sprains, bruises, and muscle pulls</li>
+                    <li>Many players keep on playing after a mild injury because of adrenaline and peer pressure</li>
+                    <li>Many players who keep on playing end up worsening their injuries</li>
+                    <li>Usually not any expert trainers around during intermural games</li>
+                    <li>911 calls work for extreme injuries, but not necessary for mild injuries</li>
+                </ul>
+                <br>
+                Moreover, several existing diagnosis tools were analyzed to learn current approaches. These tools included WebMD's SymptomChecker and Diagnose-Me.
+                <br><br>
+                The competitive analysis showed that many current solutions are not adapted to helping athletes efficiently diagnose their injuries. Some findings included:
+                <br><br>
+                <ul>
+                	<li>Users can be required to answer over 50 health questions before receiving a diagnosis, which can take too long for time-sensitive injuries</li>
+                	<li>Many app-based diagnosis tools require stable signal, which can lead to inconvenient app crashes depending on the user's location</li>
+                </ul>
+
+                </span>
+                <span class='heading'>Ideation</span>
+                <span class='body'>Based on the research findings, several design criteria were created to help guide the ideation process for brainstorming solutions: 
+                <br><br>
+                <ul>
+                    <li><span class="header">Informative</span>: The solution should offer helpful advice on diagnosing an injury and whether to keep playing</li>
+                    <li><span class="header">Convenient</span>: The solution should be quick to access and self-diagnose </li>
+                    <li><span class="header">Reliable</span>: The solution should be able to function correctly under a variety of circumstances  
+                </ul>
+                <br>
+                Using these design criteria as guidance, three different design solutions were proposed: 
+                <br><br>
+                <ul>
+                    <li><span class="header">Mobile app with voice capabilities</span>: Users are able to report injuries and receive a diagnosis; convenient because usually carry phone around; also can be hand-free; may not have signal though</li>
+                    <br>
+                    <img src='../img/pocketdoc/mobile_storyboard.jpg' />
+                    <img src='../img/pocketdoc/app_img.png' />
+                    <br><br>
+                    <li><span class="header">Kiosk</span>: Centrally located beside field; able to help users diagnose themselves and give other body measurements; reliable because no need for signal</li>
+                    <img src='../img/pocketdoc/kiosk_early.png' />
+                    <img src='../img/pocketdoc/kiosk_storyboard.jpg' />
+                    <br><br>
+                    <li><span class="header">Body suit</span>: The suit detects injuries upon impact by emiting a red dye; good for players with high pain tolerances; difficult to prototype</li>
+                    <br>
+                    <img src='../img/pocketdoc/bodysuit_storyboard.jpg' />
+                </ul>
+                <br>
+                In the end, after peer review and trade-off analysis, the kiosk solution was chosen as it addressed the design criteria well:
+                <br><br>
+                <ul>
+                    <li>Reliable in that it doesn't require cell phone signal like a mobile app, or having a cellphone at all</li>
+                    <li>Convenient, central location that many people will know about</li>
+                    <li>Extra hardware for body measurements would allow for more accurate and informative diagnosis</li>
+                </ul>
+                </span>
+                <span class='heading'>Design</span>
+                <span class='body'>After the kiosk solution was selected, several user benchmark tasks for the design were determined based on the research and ideation: 
+                <br><br>
+                <ul>
+                    <li>Diagnose an injury</li>
+                    <li>Learn about exercise routines for injury-prevention</li>
+                    <li>Get body measurements, like weight and heart rate</li>
+                </ul>
+                <br>
+                Next, a low-fidelity wireframe flow was sketched to act as a task blueprint:  
+                <br><br>
+                <img src='../img/pocketdoc/wireframes.jpg' />
+                <br><br>
+                Based on the wireframes, high-fidelity mockups were created. To solve the challenge of designers working remotely from one another, a style guide was used to promote consistency among the various designers:
+                <br><br>
+                <img src='../img/pocketdoc/style_guide.png' />
+                <img id='mockups' onclick="summon(this.id)" src='../img/pocketdoc/mockups.png' />
+                <br><br>
+                While the screen flows were being created, a sketch and high-fidelity render were concurrently designed for the physical kiosk model. There was an emphasis placed on conveying the physical hardware features of the kiosk for body measurements, such as a weight-sensitive platform and BPM handles.
+                <br><br>
+                <img src='../img/pocketdoc/kiosk_sketch.jpg' />
+                <img src='../img/pocketdoc/kiosk_physical.png' />
+                <br>
+                Lastly, an Invision prototype was created to link the high-fidelity mockups together. The prototype demo can be accessed below:
+                <br><br>
+                <iframe width="662" height="1030" src="https://invis.io/6ENO5NJ9KYS" frameborder="0" allowfullscreen></iframe>
+                </span>
+                <span class='heading'>User Testing</span>
+                <span class='body'>For user testing, heuristic evaluations and think-aloud walkthroughs were conducted using the prototype to gain feedback on the solution's usability and effectiveness in diagnosing injuries.
+                <br><br>
+                In the heuristic evaluation, five other students who were also taking human-computer interaction courses acted as the evaluators. Moreover, for the think-aloud walkthroughs, the kiosk prototype was setup near Georgia Tech's intramural fields to establish a realistic context. Nearby players were asked to perform several tasks. 
+                <br><br>
+                For example, in one of the task scenarios, the participant is asked if one of their friend was hurt and exhibiting XYZ symptoms, how might they use the prototype to help diagnose their friend's injury?
+                <br><br>
+                Based on the heuristic evaluations, think-aloud sessions, and follow-up interviews, there were several key takeaways. At a high level, user feedback showed that the:
+                <br><br>
+                <ul>
+                    <li>Idea of a centralized health kiosk seemed reliable and useful</li>
+                    <li>Minimal, blue visual design conveyed a sense of professionalism and trustworthiness</li>
+                    <li>Large kiosk screen may lead to privacy concerns, especially for body measurements</li>
+                    <li>Exercise support feature may be underutilized due to the kiosk's lack of portability; many users preferred to carry a mobile exercise guide that can be accessed anywhere in the gym</li>
+                </ul>
+                <br>
+                At a low level with regards to UI design, the main usability takeaways included:
+                <br><br>
+                <ul>
+                    <li>In the process of selecting the area of injury on the human body diagram, users weren't sure what to do next after clicking a body part and seeing the body label pop-up: </li>
+                    <br>
+                    <img class='shadow' src='../img/pocketdoc/injury_area.png' />
+                    <br><br>
+                    <li>In the list of symptoms, it was unclear that one or more of the symptoms could be selected via touch: </li>
+                    <br>
+                    <img class='shadow' src='../img/pocketdoc/symptoms.png' />
+                    <br><br>
+                    <li>For the possible diagnoses, users did not understand the meaning of the bar visualizations - which represented the likelihood of a correct diagnosis. Users also didn't know that the conditions could be selected in order to learn more: </li>
+                    <br>
+                    <img class='shadow' src='../img/pocketdoc/conditions.png' />
+                </ul>
+                </span>
+                <span class='heading'>Updated Design</span>
+                <span class='body'>Based on the feedback from the user testing, several design iterations were made. During this time, the school semester was coming to an end, and my team was faced with the challenge of meeting deadlines. To quickly produce updated design deliverables, our team decided to focus on addressing the low-level UI problems and save the higher-level product concerns for future iterations. 
+                <br><br>
+                Firstly, to address the problem of users not knowing what to do after selecting an injured area of the body, arrows and lines were added to each body part label to make it more apparent that each label is selectable:
+                <br><br>
+                <div class="img_row">
+                    <img class='shadow' src="../img/pocketdoc/injury_area.png" />
+                    <img class='shadow' src="../img/pocketdoc/injury_area_updated.png" />
+                </div>
+                <br>
+                Similarly, in the list of symptoms, users did not know that the symptoms could be selected. A checkbox was added to each symptom to make it more clear that they were selectable:
+                <br><br>
+                <div class="img_row">
+                    <img class='shadow' src="../img/pocketdoc/symptoms.png" />
+                    <img class='shadow' src="../img/pocketdoc/symptoms_updated.png" />
+                </div>
+                <br>
+                Last but not least, in the list of possible conditions, users did not understand the meaning of the bar visualizations and also did not know that the conditions could be selected to learn more about them. As a result, percentage labels and arrows were added to the symptoms:
+                <br><br>
+                <div class="img_row">
+                    <img class='shadow' src="../img/pocketdoc/conditions.png" />
+                    <img class='shadow' src="../img/pocketdoc/conditions_updated.png" />
+                </div>
+                </span>
+                <span class='heading'>Impact and Final Thoughts</span>
+                <span class='body'>
+                Overall, I really enjoyed working on this project with my classmates. We learned to overcome challenges of coordinating collaborative work and managing deliverables under time constraints.
+                <br><br>
+                Through our design process, we were able to create an accessible, reliable kiosk experience that improves upon existing solutions. Based on our findings, we confidently believe that intramural athletes would adopt our solution, leading to an overall decrease in injuries across intramural sports.
+                </span>
+            </div>
+            <div id="project_nav">
+                <a href="hiker.html">
+                    <span class="next">Next
+                        <br>
+                        <span class="title">Hiking With Friends</span>
+                    </span>
+                </a>
+                <a href="learning.html">
+                    <span class="previous">Previous
+                        <br>
+                        <span class="title">Alway's Learning</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="footer">
+                <div class="divider long"></div>
+                <a href="mailto:hi@jessewu.me"><img src="../img/email.svg"/></a>
+                <a target="_blank" href="https://www.linkedin.com/in/jesse-wu-065820126/"><img src="../img/linkedin.svg"/></a>
+                <a target="_blank" href="https://dribbble.com/jessesse"><img src="../img/dribbble.svg"/></a>
+                <a target="_blank" href="https://www.instagram.com/jessessewu/"><img src="../img/instagram.svg"/></a>
+                <div class="credit">Made with <img src="../img/heart.svg" /> by Jesse</div>
+            </div>
+        </div>
+        <div class="overlay" id="mockups" onclick="disappear(this.id)">
+            <img src="../img/pocketdoc/mockups.png" />
+        </div>
+
+        <div id="loading">
+            <div class="icon_row">
+                <div class="icon" id="smiley">
+                    <img src="../img/smiley.svg" />
+                </div>
+                <div class="icon" id="slice">
+                    <img src="../img/slice.svg" />
+                </div>
+                <div class="icon" id="cash">
+                    <img src="../img/cash.svg" />
+                </div>
+                <div class="icon" id="graph">
+                    <img src="../img/flask.svg" />
+                </div>
+            </div>
+        </div> 
+
+    </body>
+
+    <script>
+        function hover_fix()
+        {
+            var el = this;
+            var par = el.parentNode;
+            var next = el.nextSibling;
+            par.removeChild(el);
+            setTimeout(function() {par.insertBefore(el, next);}, 0)
+        }
+
+        function disappear(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-in";
+        }
+
+        function summon(id)
+        {
+            document.querySelector(".overlay" + "#" + id).style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector(".case_study .body img ").style.cursor = "zoom-out";
+        }
+
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+        }, 1700);
+    </script>
+
+</html>
