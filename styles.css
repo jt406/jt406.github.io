@@ -505,7 +505,6 @@ body a {
 .case_study .body a:link {
     font-weight: 400;
     text-decoration: none;
-    font-style: italic;
     color: rgb(85, 93, 109);
     background-color: rgb(240, 240, 240);
 }
@@ -513,7 +512,6 @@ body a {
 .case_study .body a:visited {
 	font-weight: 400;
     text-decoration: none;
-    font-style: italic;
     color: rgb(85, 93, 109);
     background-color: rgb(240, 240, 240);
 }
