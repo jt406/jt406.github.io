@@ -154,12 +154,12 @@ body a {
     display: flex;
     justify-content: space-between; /* Distributes space between items */
     align-items: bottom; /* Vertically aligns items in the center */
-    color: rgb(85, 93, 109, 0.8);
 }
 
 #work .project .description_and_cta .description {
     /*width: 400px; /* 288px when above; 250px when below query */
     margin-top: 6px;
+    color: rgb(85, 93, 109, 0.8);
     /*color: #888888;
     font-size: 18px;
     line-height: 27px;*/
@@ -168,6 +168,7 @@ body a {
 #work .project .description_and_cta .arrow {
     display:none;
     font-size: 20px;
+    color: rgb(85, 93, 109, 0.7);
 }
 
 #work .project:hover .arrow {
