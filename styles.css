@@ -117,6 +117,7 @@ body a {
 #work .project:hover {
     cursor: pointer;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    transform: scale(1.025);
 }
 
 #work .project:hover .explore {
@@ -149,13 +150,28 @@ body a {
     font-size: 16px;
 }
 
-#work .project .description {
+#work .project .description_and_cta {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Vertically aligns items in the center */
+    color: rgb(85, 93, 109, 0.8);
+}
+
+#work .project .description_and_cta .description {
     /*width: 400px; /* 288px when above; 250px when below query */
     margin-top: 6px;
-    color: rgb(85, 93, 109, 0.8);
     /*color: #888888;
     font-size: 18px;
     line-height: 27px;*/
+}
+
+#work .project .description_and_cta .arrow {
+    display:none;
+    font-size: 20px;
+}
+
+#work .project:hover .arrow {
+    display:inline-block;
 }
 
 #work .project .explore {
