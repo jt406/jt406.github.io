@@ -168,7 +168,7 @@ body a {
 #work .project .description_and_cta .arrow {
     display:none;
     font-size: 20px;
-    color: rgb(85, 93, 109, 0.7);
+    color: rgb(85, 93, 109, 0.65);
 }
 
 #work .project:hover .arrow {
