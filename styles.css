@@ -17,8 +17,15 @@ body {
 }
 
 body a {
-    color: #4A90E2;
-    text-decoration: none;
+    color: rgb(85, 93, 109, 0.8);
+    text-decoration: underline;
+    text-decoration-style: none;
+    text-decoration-color: rgb(235, 235, 235);
+    text-underline-offset: 2px;
+}
+
+body a:hover {
+    background-color:rgb(235, 235, 235);
 }
 
 #wrapper {
