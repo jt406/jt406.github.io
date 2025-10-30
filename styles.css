@@ -28,7 +28,7 @@ body a {
 body a:hover {
     color: rgb(85, 93, 109, 0.8);
     /*background-color:rgb(85, 93, 109, 0.05);*/
-    text-decoration-color: rgb(85, 93, 109, 0.8);    
+    text-decoration-color: rgb(85, 93, 109, 0.6);    
     /*text-decoration-style: dotted;*/
 }
 
