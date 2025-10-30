@@ -22,7 +22,7 @@ body a {
     text-decoration: underline;
     text-decoration-style: none;
     text-decoration-color: rgb(85, 93, 109, 0.2);
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
 }
 
 body a:hover {
