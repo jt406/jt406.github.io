@@ -1,9 +1,30 @@
+:root {
+	--white: #FCFCFF;
+  --light-grey: #EBEBF0;
+  --grey: #71717A;
+  --light-black: #454552;
+  --black: #33333D;
+  --dark-black: #020203;
+
+	--section-background: var(--light-grey);
+	--button-background: var(--black);
+	--button-background-hover: var(--light-black);
+	--button-background-active: var(--dark-black);
+	--secondary-text: var(--grey);
+	--primary-text: var(--black);
+	--inverse-text: var(--white);
+}
+
 * {
   touch-action: manipulation;
+  border-radius: 2px;
 }
 
 body {
 	font-family: 'Inter', sans-serif;
+	color: var(--primary-text);
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .game-area {
@@ -22,8 +43,16 @@ body {
 
 .stat {
 	display: inline-block;
-	background-color: rgb(235, 235, 240);
+	background-color: var(--section-background);
 	padding: 8px;
+}
+
+.stat .name {
+	color: #71717A;
+}
+
+.stat .value {
+	font-weight: 500;
 }
 
 .stats-bar .last-item {
@@ -36,7 +65,7 @@ body {
 	align-items: center;
 	height: 328px;
 	margin-top: 8px;
-	background-color: rgb(235, 235, 240);
+	background-color: var(--section-background);
 }
 
 .big-number {
@@ -46,7 +75,21 @@ body {
 
 .big-button {
 	width: 100%;
-	margin-top: 8px;
+	margin-top: 10px;
 	cursor: pointer;
 	height: 80px;
+	background-color: var(--button-background);
+	color: var(--inverse-text);
+	border: none;
+	font-size: 20px;
+	font-weight: 500;
 }
+
+.big-button:hover {
+  background-color: var(--button-background-hover);
+}
+
+.big-button:active {
+  background-color: var(--button-background-active);
+}
+
