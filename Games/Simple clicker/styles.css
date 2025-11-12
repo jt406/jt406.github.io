@@ -68,12 +68,12 @@ body {
 	background-color: var(--section-background);
 }
 
-.big-number {
+#big-number {
 	font-size: 96px;
 	font-weight: 700;
 }
 
-.big-button {
+#big-button {
 	width: 100%;
 	margin-top: 10px;
 	cursor: pointer;
@@ -85,11 +85,11 @@ body {
 	font-weight: 500;
 }
 
-.big-button:hover {
+#big-button:hover {
   background-color: var(--button-background-hover);
 }
 
-.big-button:active {
+#big-button:active {
   background-color: var(--button-background-active);
 }
 

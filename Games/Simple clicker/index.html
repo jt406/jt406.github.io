@@ -8,22 +8,23 @@
         <title>
             Clicker game
         </title>
+         <script src="script.js" defer></script>
     </head>
   
     <body>
         <div class="game-area">
             <div class="stats-bar">
                 <div>
-                    <div class="stat"><span class="name">Level: </span><span class="value">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value">40</span></div>
+                    <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">40</span></div>
                 </div>
                 <div class="stat">
-                    <span class="name">Time: </span><span class="value">20</span>
+                    <span class="name">Time: </span><span class="value" id="time">5</span>
                 </div>
             </div>
             <div class="number-area">
-                <p class="big-number">20</p>
+                <p id="big-number">0</p>
             </div>
-            <button class="big-button">
+            <button id="big-button">
                 Grow
             </button>
         </div>
