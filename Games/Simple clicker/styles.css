@@ -34,7 +34,7 @@ body {
 	margin-top: 80px;
 }
 
-.stats-bar {
+#stats-bar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -55,11 +55,11 @@ body {
 	font-weight: 500;
 }
 
-.stats-bar .last-item {
+#stats-bar .last-item {
 	margin-left: 8px;
 }
 
-.number-area {
+#number-area {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -92,4 +92,11 @@ body {
 #big-button:active {
   background-color: var(--button-background-active);
 }
+
+.shop-option {
+	background-color: var(--section-background);
+	margin-top: 8px;
+	height: 104px;
+}
+
 

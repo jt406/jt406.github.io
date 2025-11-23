@@ -11,6 +11,7 @@ greet("Bob");   // Output: Hello, Bob!
 const gameState = {
   GAMEOVER: "GAMEOVER",
   PLAY: "PLAYING",
+  BEATLEVEL: "BEATLEVEL",
   SHOP: "SHOP"
 }
 
@@ -29,10 +30,13 @@ const timeTxt = document.getElementById("time");
 const bigButton = document.getElementById("big-button");
 const bigNumTxt= document.getElementById("big-number");
 
+const statsBar = document.getElementById("stats-bar");
+const actionArea = document.getElementById("action-area");
+
 
 function resetGame() {
   level = 1;
-  goal = 10;
+  goal = 3;
   time = 5;
   bigNum = 0;
   
@@ -52,6 +56,7 @@ function didBeatLevel() {
     bigNumTxt.innerHTML = "You win.";
     bigButton.innerHTML = "Continue";
     clearInterval(timeCountdown);
+    currState = gameState.BEATLEVEL;
   }
 }
 
@@ -63,7 +68,9 @@ bigButton.addEventListener("click", function() {
       didBeatLevel();
     } else if (currState == gameState.GAMEOVER) {
       resetGame();
-    }
+    } else if (currState == gameState.BEATLEVEL) {
+      showShopUI(); // need to create this function;
+    } 
 });
 
 
@@ -81,6 +88,28 @@ function startCountdown() {
     }
     time -= 1;
   }, 1000);
+}
+
+function showShopUI() {
+  statsBar.innerHTML = `
+    <div class="stat">
+        <span class="name">Select an upgrade</span>
+    </div>
+  `;
+  actionArea.innerHTML = `
+    <div class="shop-option">
+      <div class="shopItem">+20</div>
+      <button class="selectOpton">Select</button>
+    </div>
+    <div class="shop-option">
+      <div class="shopItem">x2</div>
+      <button class="selectOpton">Select</button>
+    </div>
+    <div class="shop-option">
+      <div class="shopItem">+40</div>
+      <button class="selectOpton">Select</button>
+    </div>
+  `;
 }
 
 resetGame(); // initiate game

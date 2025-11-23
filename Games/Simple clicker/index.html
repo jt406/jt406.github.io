@@ -13,7 +13,7 @@
   
     <body>
         <div class="game-area">
-            <div class="stats-bar">
+            <div id="stats-bar">
                 <div>
                     <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">40</span></div>
                 </div>
@@ -21,11 +21,13 @@
                     <span class="name">Time: </span><span class="value" id="time">5</span>
                 </div>
             </div>
-            <div class="number-area">
-                <p id="big-number">0</p>
+            <div id="action-area">
+                <div id="number-area">
+                    <p id="big-number">0</p>
+                </div>
             </div>
             <button id="big-button">
-                Grow
+                Grow 
             </button>
         </div>
     </body>
