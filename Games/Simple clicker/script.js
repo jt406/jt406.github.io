@@ -98,16 +98,16 @@ function showShopUI() {
   `;
   actionArea.innerHTML = `
     <div class="shop-option">
-      <div class="shopItem">+20</div>
-      <button class="selectOpton">Select</button>
+      <div class="shop-item">+20</div>
+      <button class="select-option">Select</button>
     </div>
     <div class="shop-option">
-      <div class="shopItem">x2</div>
-      <button class="selectOpton">Select</button>
+      <div class="shop-item">x2</div>
+      <button class="select-option">Select</button>
     </div>
     <div class="shop-option">
-      <div class="shopItem">+40</div>
-      <button class="selectOpton">Select</button>
+      <div class="shop-item">+40</div>
+      <button class="select-option">Select</button>
     </div>
   `;
 }
