@@ -104,6 +104,14 @@ body a:hover {
     /*height: 32px;*/
 }
 
+#hero .title .circle {
+    border-radius: 100px;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    margin-bottom: 32px;
+}
+
 #hero .title .subtitle {
     margin-top: 8px;
     margin-bottom: 0px;
