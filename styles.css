@@ -110,7 +110,7 @@ body a:hover {
 }
 
 #hero .title .subtitle {
-    margin-top: 8px;
+    margin-top: 6px;
     margin-bottom: 0px;
     font-size: 16px;
     line-height: 20px;
@@ -124,9 +124,8 @@ body a:hover {
 #hero .divider.short {
 	height: 1px;
     width: 24px;
-    background-color: #9697A3;
+    background-color: #54555C;
     margin: 32px 0;
-    opacity: 0.5;
 }
 
 
