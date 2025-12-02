@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('img_girl.jpg');
-    background-color: #131314;
+    background-color: #121314;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -19,18 +19,15 @@ body {
 }
 
 body a {
-    color: #EBEBFF;
     text-decoration: none;
-    text-decoration-style: none;
-    text-decoration-color: rgb(85, 93, 109, 0.2);
-    text-underline-offset: 2px;
+    color: #EBECFF;
 }
 
 body a:hover {
-    /*background-color:rgb(85, 93, 109, 0.05);*/
     text-decoration: underline;
-    text-decoration-color: #EBEBFF;
+    text-decoration-color: #EBECFF;
     text-decoration-style: dotted;
+    text-underline-offset: 4px;
 }
 
 #wrapper {
@@ -99,7 +96,7 @@ body a:hover {
 #hero .title {
     font-size: 24px;
     font-weight: 600;
-    color: #EBEBFF;
+    color: #EBECFF;
     letter-spacing: -0.288px;
     /*height: 32px;*/
 }
