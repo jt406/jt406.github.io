@@ -110,6 +110,7 @@ function showShopUI() {
       <button class="select-option">Select</button>
     </div>
   `;
+  bigButton.style.display = "none";
 }
 
 resetGame(); // initiate game
