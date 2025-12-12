@@ -1,12 +1,14 @@
 :root {
 	--white: #FCFCFF;
-  --light-grey: #EBEBF0;
+  --very-light-grey: #EBEBF0;
+  --light-grey: #DFDFE5;
   --grey: #71717A;
   --light-black: #454552;
   --black: #33333D;
   --dark-black: #020203;
 
-	--section-background: var(--light-grey);
+	--section-background: var(--very-light-grey);
+	--nested-section-background: var(--light-grey);
 	--button-background: var(--black);
 	--button-background-hover: var(--light-black);
 	--button-background-active: var(--dark-black);
@@ -44,7 +46,7 @@ body {
 .stat {
 	display: inline-block;
 	background-color: var(--section-background);
-	padding: 8px;
+	padding: 8px 9px 8px 8px;
 }
 
 .stat .name {
@@ -101,12 +103,31 @@ body {
 
 .shop-item {
 	background-color: var(--section-background);
-	font-size: 48px;
-	font-weight: 700;
 	width: 316px;
 	display: flex;
 	align-items: center;
-	padding: 20px;
+	padding-left:20px;
+	padding-right:24px;
+}
+
+.item-effect {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.special-item {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.item-tradeoff {
+	margin-top: 2px;
+}
+
+.item-tradeoff .stat {
+	background-color: var(--nested-section-background);
 }
 
 .select-option {

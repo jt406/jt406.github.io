@@ -93,20 +93,31 @@ function startCountdown() {
 function showShopUI() {
   statsBar.innerHTML = `
     <div class="stat">
-        <span class="name">Select an upgrade</span>
+        <span class="name">Select one upgrade</span>
     </div>
   `;
   actionArea.innerHTML = `
     <div class="shop-option">
-      <div class="shop-item">+20</div>
+      <div class="shop-item">
+        <div class="item-effect">+20</div>
+      </div>
       <button class="select-option">Select</button>
     </div>
     <div class="shop-option">
-      <div class="shop-item">x2</div>
+      <div class="shop-item">
+        <div class="item-effect">x2</div>
+      </div>
       <button class="select-option">Select</button>
     </div>
     <div class="shop-option">
-      <div class="shop-item">+40</div>
+      <div class="shop-item">
+        <div class="special-item">
+          <div class="item-effect">+40</div>
+          <div class="item-tradeoff">
+            <div class="stat"><span class="name">Time: </span><span class="value" id="level">5 -> 4</span></div>
+          </div>
+        </div>
+      </div>
       <button class="select-option">Select</button>
     </div>
   `;
