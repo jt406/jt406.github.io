@@ -125,9 +125,17 @@ body a:hover {
 	height: 1px;
     width: 24px;
     background-color: #54555C;
+    /*background-color: #9697A3;*/
     margin: 32px 0;
 }
 
+#hero .profile-pic {
+    width: 56px;
+    height: 56px;
+    border-radius: 80px;
+    margin-bottom: 16px;
+    opacity: 1;
+}
 
 #work {
     margin-top: 32px;
