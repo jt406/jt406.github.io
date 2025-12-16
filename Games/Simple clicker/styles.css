@@ -147,3 +147,8 @@ body {
 .select-option:active {
   background-color: var(--button-background-active);
 }
+
+#powerups .stat{
+	margin-top: 8px;
+	margin-right: 4px;
+}

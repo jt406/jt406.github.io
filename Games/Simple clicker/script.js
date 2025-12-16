@@ -15,6 +15,12 @@ const gameState = {
   SHOP: "SHOP"
 }
 
+const selectedOption = {
+  ONE: "ONE",
+  TWO: "TWO",
+  THREE: "THREE"
+}
+
 let currState;
 let level;
 let goal;
@@ -32,6 +38,12 @@ const bigNumTxt= document.getElementById("big-number");
 
 const statsBar = document.getElementById("stats-bar");
 const actionArea = document.getElementById("action-area");
+
+const powerups = document.getElementById("powerups");
+
+let selectOption1;
+let selectOption2;
+let selectOption3;
 
 
 function resetGame() {
@@ -101,13 +113,13 @@ function showShopUI() {
       <div class="shop-item">
         <div class="item-effect">+20</div>
       </div>
-      <button class="select-option">Select</button>
+      <button class="select-option" id="select-option-1">Select</button>
     </div>
     <div class="shop-option">
       <div class="shop-item">
         <div class="item-effect">x2</div>
       </div>
-      <button class="select-option">Select</button>
+      <button class="select-option" id="select-option-2">Select</button>
     </div>
     <div class="shop-option">
       <div class="shop-item">
@@ -118,10 +130,65 @@ function showShopUI() {
           </div>
         </div>
       </div>
-      <button class="select-option">Select</button>
+      <button class="select-option" id="select-option-3">Select</button>
     </div>
   `;
   bigButton.style.display = "none";
+
+  selectOption1 = document.getElementById("select-option-1");
+  selectOption2 = document.getElementById("select-option-2");
+  selectOption3 = document.getElementById("select-option-3");
+
+  selectOption1.addEventListener("click", function() { 
+    showGameUI(selectedOption.ONE);
+  });
+
+  selectOption2.addEventListener("click", function() { 
+    showGameUI(selectedOption.TWO);
+  });
+
+  selectOption3.addEventListener("click", function() { 
+    showGameUI(selectedOption.THREE);
+  });
 }
+
+function showGameUI(selectedPowerup) {
+  if (selectedPowerup == selectedOption.ONE) {
+    powerups.innerHTML += `
+      <div class="stat">
+          <span class="value">+20</span>
+      </div>
+    `;
+  } else if (selectedPowerup == selectedOption.TWO) {
+    powerups.innerHTML += `
+      <div class="stat">
+          <span class="value">x2</span>
+      </div>
+    `;
+  } else if (selectedPowerup == selectedOption.THREE) {
+    powerups.innerHTML += `
+      <div class="stat">
+          <span class="value">+40</span>
+      </div>
+    `;
+  } 
+
+  statsBar.innerHTML = `
+    <div>
+        <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">40</span></div>
+    </div>
+    <div class="stat">
+        <span class="name">Time: </span><span class="value" id="time">5</span>
+    </div>
+  `;
+  actionArea.innerHTML = `
+    <div id="number-area">
+        <p id="big-number">0</p>
+    </div>
+  `;
+  bigButton.style.display = "inline-block";
+
+  /* Consider: Timer doesn't start until pressed the first button */
+}  
 
 resetGame(); // initiate game
