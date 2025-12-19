@@ -34,7 +34,7 @@ const goalTxt = document.getElementById("goal");
 const timeTxt = document.getElementById("time");
 
 const bigButton = document.getElementById("big-button");
-const bigNumTxt= document.getElementById("big-number");
+const bigNumTxt = document.getElementById("big-number");
 
 const statsBar = document.getElementById("stats-bar");
 const actionArea = document.getElementById("action-area");
@@ -45,7 +45,7 @@ let selectOption1;
 let selectOption2;
 let selectOption3;
 
-
+/*
 function resetGame() {
   level = 1;
   goal = 3;
@@ -60,10 +60,27 @@ function resetGame() {
   currState = gameState.PLAY;
 
   startCountdown();
+}*/
+
+
+function resetGame(currLevel, currGoal, currTime) {
+  level = currLevel;
+  goal = currGoal;
+  time = currTime;
+  bigNum = 0;
+  
+  levelTxt.innerHTML = level;
+  goalTxt.innerHTML = goal;
+  timeTxt.innerHTML = time;
+  bigNumTxt.innerHTML = bigNum;
+  bigButton.innerHTML = "Grow";
+  currState = gameState.PLAY;
+
+  startCountdown();
 }
 
 function didBeatLevel() {
-  if (goal+1 == bigNum) {
+  if (goal == bigNum) {
     bigNumTxt.style.fontSize = "64px";
     bigNumTxt.innerHTML = "You win.";
     bigButton.innerHTML = "Continue";
@@ -175,7 +192,7 @@ function showGameUI(selectedPowerup) {
 
   statsBar.innerHTML = `
     <div>
-        <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">40</span></div>
+        <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">3</span></div>
     </div>
     <div class="stat">
         <span class="name">Time: </span><span class="value" id="time">5</span>
@@ -188,7 +205,8 @@ function showGameUI(selectedPowerup) {
   `;
   bigButton.style.display = "inline-block";
 
-  /* Consider: Timer doesn't start until pressed the first button */
+  /*resetGame(2,20,5);*/ // figure out how to integrate this into the html
 }  
 
-resetGame(); // initiate game
+resetGame(1,10,5); // initiate game
+/*resetGame();*/
