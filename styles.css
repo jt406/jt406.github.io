@@ -13,6 +13,32 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.test-square {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    pointer-events: none;
+    z-index 1000;
+}
+
+.trail-square {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background-color: #EBECFF;
+    pointer-events: none;
+    z-index 1000;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
 .fadein-1 {
     opacity: 0;
     animation-name: fadein;
@@ -136,6 +162,7 @@ body a:hover {
     font-weight: 600;
     color: #EBECFF;
     letter-spacing: -0.288px;
+    opacity: 0;
     /*height: 32px;*/
 }
 
@@ -165,6 +192,7 @@ body a:hover {
     background-color: #54555C;
     /*background-color: #9697A3;*/
     margin: 32px 0;
+    opacity: 0;
 }
 
 #hero .profile-pic {
@@ -172,7 +200,19 @@ body a:hover {
     height: 56px;
     border-radius: 80px;
     margin-bottom: 16px;
-    opacity: 1;
+    opacity: 0;
+}
+
+#hero .description #paragraph-1 {
+    opacity: 0;
+}
+
+#hero .description #paragraph-2 {
+    opacity: 0;
+}
+
+#hero .description #paragraph-3 {
+    opacity: 0;
 }
 
 #work {

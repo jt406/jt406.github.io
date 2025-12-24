@@ -17,17 +17,17 @@
         <div id="wrapper">
             <div id="hero">
                 <!--<div class="description">Hi, I'm</div>-->
-                <img src="img/profile-pic.png" class="profile-pic fadein-1">
-                <div class="title fadein-2">
+                <img src="img/profile-pic.png" class="profile-pic">
+                <div class="title">
                     <!--<div class="circle"></div>-->
                     Jesse Wu
                     <p class="subtitle">Product Designer</p>
                 </div>
-                <div class="divider short fadein-3"></div>
+                <div class="divider short"></div>
                 <div class="description">
-                    <p class="fadein-3">I'm a designer who thrives in technical problem spaces. I have 6 years of experience in B2B enterprise platform security and user management.</p>
-                    <p class="fadein-4">With a background in design and engineering, I've tackled complex areas to deliver robust, end-to-end solutions that address customer needs by following a design process rooted in research, ideation, and collaboration.</p>
-                    <p class="fadein-5">If you're looking for a passionate designer who works hard and smart, strives to constantly learn and improve, and synergizes well with others on a team, contact me at <a href="mailto:jwu9993@gmail.com"> jwu9993@gmail.com</a>.</p>
+                    <p id="paragraph-1">I'm a designer who thrives in technical problem spaces. I have 6 years of experience in B2B enterprise platform security and user management.</p>
+                    <p id="paragraph-2">With a background in design and engineering, I've tackled complex areas to deliver robust, end-to-end solutions that address customer needs by following a design process rooted in research, ideation, and collaboration.</p>
+                    <p id="paragraph-3">If you're looking for a passionate designer who works hard and smart, strives to constantly learn and improve, and synergizes well with others on a team, contact me at <a href="mailto:jwu9993@gmail.com"> jwu9993@gmail.com</a>.</p>
                     <p>
                 </div>
         </div>
@@ -51,21 +51,63 @@
     </body>
 
     <!-- https://share.google/aimode/5FDOFPvtJi2angWTH // how to create trailing effect -->
+    <!-- https://share.google/aimode/v73PtepUm6GNajldm // something that follows mouse -->
+    <!-- Maybe just start with painting a square anywhere on the screen first; small steps -->
 
+    <!-- https://stackoverflow.com/questions/60289558/how-to-animate-css-element-only-when-it-appears-on-a-window // Take a break to fix animation so that it only starts when elements are visible in viewport -->
 
-    <!--<script>
-        function hover_fix()
-        {
-            var el = this;
-            var par = el.parentNode;
-            var next = el.nextSibling;
-            par.removeChild(el);
-            setTimeout(function() {par.insertBefore(el, next);}, 0)
-        }
+    <!-- https://share.google/aimode/g73DJudU6Ifgn2QI6 // Determine if tab is being looked at, then trigger the animation only once-->
 
-        setTimeout(function() {
-            document.getElementById("loading").style.display = "none";
-        }, 1700);
+    <!-- https://share.google/aimode/Ryv3ChhoXdPk8F0Y0 // Chrome loads pages too fast, so animation starts too soon -->
+
+    <!--
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const square = document.createElement('div');
+            square.classList.add('test-square');
+
+            square.style.left = '${e.clientX - 8}px';
+            square.style.right = '$(e.clientY - 8}px';
+            console.log('the left coord: ' + square.style.left);
+
+            document.body.appendChild(square);
+        }); 
+    </script> 
+    -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const profilePic = document.querySelector('.profile-pic');
+            if (profilePic) {
+                profilePic.classList.add('fadein-1');
+            }
+
+            const title = document.querySelector('.title');
+            if (title) {
+                title.classList.add('fadein-2');
+            }
+
+            const divider = document.querySelector('.divider.short');
+            if (divider) {
+                divider.classList.add('fadein-3');
+            }
+
+            const p1 = document.querySelector('#paragraph-1');
+            if (p1) {
+                p1.classList.add('fadein-3');
+            }
+
+            const p2 = document.querySelector('#paragraph-2');
+            if (p2) {
+                p2.classList.add('fadein-4');
+            }
+
+            const p3 = document.querySelector('#paragraph-3');
+            if (p3) {
+                p3.classList.add('fadein-5');
+            }
+
+        });
     </script>
 
 </html>

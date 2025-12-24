@@ -29,74 +29,64 @@ let bigNum;
 
 let timeCountdown;
 
-const levelTxt = document.getElementById("level");
-const goalTxt = document.getElementById("goal");
-const timeTxt = document.getElementById("time");
+let levelLabelTxt = document.getElementById("level-label");
+let timeLabelTxt = document.getElementById("time-label");
+let levelTxt = document.getElementById("level");
+let goalTxt = document.getElementById("goal");
+let timeTxt = document.getElementById("time");
 
-const bigButton = document.getElementById("big-button");
-const bigNumTxt = document.getElementById("big-number");
+let bigButton = document.getElementById("big-button");
+let bigNumTxt = document.getElementById("big-number");
 
-const statsBar = document.getElementById("stats-bar");
-const actionArea = document.getElementById("action-area");
+let statsBar = document.getElementById("stats-bar");
+let actionArea = document.getElementById("action-area");
 
-const powerups = document.getElementById("powerups");
+let powerups = document.getElementById("powerups");
 
 let selectOption1;
 let selectOption2;
 let selectOption3;
 
-/*
-function resetGame() {
-  level = 1;
-  goal = 3;
-  time = 5;
-  bigNum = 0;
-  
-  levelTxt.innerHTML = level;
-  goalTxt.innerHTML = goal;
-  timeTxt.innerHTML = time;
-  bigNumTxt.innerHTML = bigNum;
-  bigButton.innerHTML = "Grow";
-  currState = gameState.PLAY;
+let increment;
 
-  startCountdown();
-}*/
-
-
-function resetGame(currLevel, currGoal, currTime) {
+function resetLevel(currLevel, currGoal, currTime, currIncrement) {
   level = currLevel;
   goal = currGoal;
   time = currTime;
   bigNum = 0;
+  increment = currIncrement;
   
   levelTxt.innerHTML = level;
   goalTxt.innerHTML = goal;
   timeTxt.innerHTML = time;
   bigNumTxt.innerHTML = bigNum;
-  bigButton.innerHTML = "Grow";
+  bigButton.innerHTML = "Grow"
   currState = gameState.PLAY;
 
   startCountdown();
 }
 
 function didBeatLevel() {
-  if (goal == bigNum) {
+  if (goal <= bigNum) {
     bigNumTxt.style.fontSize = "64px";
     bigNumTxt.innerHTML = "You win.";
     bigButton.innerHTML = "Continue";
     clearInterval(timeCountdown);
     currState = gameState.BEATLEVEL;
+    level++;
+    goal *= 10;
   }
 }
 
 // Note: Try the 3d button for a more tactile feel, aka the pomofocus button
 bigButton.addEventListener("click", function() { 
     if (currState == gameState.PLAY) {
-      bigNum++;
+      bigNum += increment;
       bigNumTxt.innerHTML = bigNum;
       didBeatLevel();
     } else if (currState == gameState.GAMEOVER) {
-      resetGame();
+      resetLevel(1,3,5,1);
+      powerups.innerHTML = "";
     } else if (currState == gameState.BEATLEVEL) {
       showShopUI(); // need to create this function;
     } 
@@ -120,11 +110,19 @@ function startCountdown() {
 }
 
 function showShopUI() {
-  statsBar.innerHTML = `
+  // figure out how to show the new level and goal while in the shop, so have a reference of upcoming requirements and feels a bit more in-context
+  /*statsBar.innerHTML = `
     <div class="stat">
         <span class="name">Select one upgrade</span>
     </div>
-  `;
+  `;*/
+
+  levelLabelTxt.innerHTML = "Next Level: ";
+  levelTxt.innerHTML = level; 
+  goalTxt.innerHTML = goal;
+  timeLabelTxt.innerHTML = "Select one";
+  timeTxt.innerHTML = "";
+
   actionArea.innerHTML = `
     <div class="shop-option">
       <div class="shop-item">
@@ -176,37 +174,50 @@ function showGameUI(selectedPowerup) {
           <span class="value">+20</span>
       </div>
     `;
+    increment += 20;
+    console.log("increment is " + increment);
   } else if (selectedPowerup == selectedOption.TWO) {
     powerups.innerHTML += `
       <div class="stat">
           <span class="value">x2</span>
       </div>
     `;
+    increment *= 2; //figure out how to make x2 apply to current number; does this intuitive in the first place?
+    console.log("increment is " + increment);
   } else if (selectedPowerup == selectedOption.THREE) {
     powerups.innerHTML += `
       <div class="stat">
           <span class="value">+40</span>
       </div>
     `;
+    increment += 40; //figure out how to decrement time as well; need currTime vs maxTime
+    console.log("increment is " + increment);
   } 
 
-  statsBar.innerHTML = `
-    <div>
-        <div class="stat"><span class="name">Level: </span><span class="value" id="level">1</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">3</span></div>
-    </div>
-    <div class="stat">
-        <span class="name">Time: </span><span class="value" id="time">5</span>
-    </div>
-  `;
+  level++;
+  goal*=10;
+  time = 5;
+
+
+  statsBar.innerHTML = '<div><div class="stat"><span class="name">Level: </span><span class="value" id="level">' + level + '</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">' + goal + '</span></div></div><div class="stat"><span class="name">Time: </span><span class="value" id="time">' + time + '</span></div>';
   actionArea.innerHTML = `
     <div id="number-area">
         <p id="big-number">0</p>
     </div>
   `;
-  bigButton.style.display = "inline-block";
+  bigButton.style.display = "inline-block"; 
 
-  /*resetGame(2,20,5);*/ // figure out how to integrate this into the html
+  levelTxt = document.getElementById("level");
+  goalTxt = document.getElementById("goal");
+  timeTxt = document.getElementById("time");
+
+  bigButton = document.getElementById("big-button");
+  bigNumTxt = document.getElementById("big-number");
+
+  resetLevel(level, goal, time, increment);
+
+  /*resetLevel(2,20,5);*/ // figure out how to integrate this into the html
 }  
 
-resetGame(1,10,5); // initiate game
-/*resetGame();*/
+resetLevel(1,3,5,1); // initiate game
+/*resetLevel();*/
