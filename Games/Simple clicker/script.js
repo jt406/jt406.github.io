@@ -29,6 +29,10 @@ let bigNum;
 
 let timeCountdown;
 
+let levelStat = document.getElementById("level-stat");
+let goalStat = document.getElementById("goal-stat");
+let timeStat = document.getElementById("time-stat");
+
 let levelLabelTxt = document.getElementById("level-label");
 let timeLabelTxt = document.getElementById("time-label");
 let levelTxt = document.getElementById("level");
@@ -75,6 +79,7 @@ function didBeatLevel() {
     currState = gameState.BEATLEVEL;
     level++;
     goal *= 10;
+    time = 5;
   }
 }
 
@@ -88,7 +93,7 @@ bigButton.addEventListener("click", function() {
       resetLevel(1,3,5,1);
       powerups.innerHTML = "";
     } else if (currState == gameState.BEATLEVEL) {
-      showShopUI(); // need to create this function;
+      showShopUI(); 
     } 
 });
 
@@ -110,18 +115,12 @@ function startCountdown() {
 }
 
 function showShopUI() {
-  // figure out how to show the new level and goal while in the shop, so have a reference of upcoming requirements and feels a bit more in-context
-  /*statsBar.innerHTML = `
-    <div class="stat">
-        <span class="name">Select one upgrade</span>
-    </div>
-  `;*/
-
   levelLabelTxt.innerHTML = "Next Level: ";
   levelTxt.innerHTML = level; 
   goalTxt.innerHTML = goal;
-  timeLabelTxt.innerHTML = "Select one";
-  timeTxt.innerHTML = "";
+
+  timeStat.style.display = "none";
+  bigButton.style.display = "none";
 
   actionArea.innerHTML = `
     <div class="shop-option">
@@ -148,7 +147,6 @@ function showShopUI() {
       <button class="select-option" id="select-option-3">Select</button>
     </div>
   `;
-  bigButton.style.display = "none";
 
   selectOption1 = document.getElementById("select-option-1");
   selectOption2 = document.getElementById("select-option-2");
@@ -182,7 +180,7 @@ function showGameUI(selectedPowerup) {
           <span class="value">x2</span>
       </div>
     `;
-    increment *= 2; //figure out how to make x2 apply to current number; does this intuitive in the first place?
+    increment *= 2; //figure out how to make x2 apply to current number; does this feel intuitive in the first place?
     console.log("increment is " + increment);
   } else if (selectedPowerup == selectedOption.THREE) {
     powerups.innerHTML += `
@@ -190,13 +188,10 @@ function showGameUI(selectedPowerup) {
           <span class="value">+40</span>
       </div>
     `;
-    increment += 40; //figure out how to decrement time as well; need currTime vs maxTime
+    increment += 40;
+    time = 4;
     console.log("increment is " + increment);
   } 
-
-  level++;
-  goal*=10;
-  time = 5;
 
 
   statsBar.innerHTML = '<div><div class="stat"><span class="name">Level: </span><span class="value" id="level">' + level + '</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">' + goal + '</span></div></div><div class="stat"><span class="name">Time: </span><span class="value" id="time">' + time + '</span></div>';
@@ -215,9 +210,6 @@ function showGameUI(selectedPowerup) {
   bigNumTxt = document.getElementById("big-number");
 
   resetLevel(level, goal, time, increment);
-
-  /*resetLevel(2,20,5);*/ // figure out how to integrate this into the html
 }  
 
 resetLevel(1,3,5,1); // initiate game
-/*resetLevel();*/
