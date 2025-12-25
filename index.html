@@ -33,39 +33,41 @@
         </div>
 
         <script>
-            // 1. Define the callback function
-            const handleIntersection = (entries, observer) => {
-              entries.forEach(entry => {
-                // Check if the target element is intersecting with the root (viewport by default)
-                if (entry.isIntersecting) {
-                    console.log('Target element is now visible! Its ID + entry.target.id');
-                    document.querySelector('.profile-pic').classList.add('fadein-1');
-                    document.querySelector('.title').classList.add('fadein-2');
-                    document.querySelector('.divider.short').classList.add('fadein-3');
-                    document.querySelector('#paragraph-1').classList.add('fadein-3');
-                    document.querySelector('#paragraph-2').classList.add('fadein-4');
-                    document.querySelector('#paragraph-3').classList.add('fadein-5');
-                    // Optional: Stop observing the element after the first intersection
-                    observer.unobserve(entry.target);
+            window.addEventListener('DOMContentLoaded', function() {
+                // 1. Define the callback function
+                const handleIntersection = (entries, observer) => {
+                  entries.forEach(entry => {
+                    // Check if the target element is intersecting with the root (viewport by default)
+                    if (entry.isIntersecting) {
+                        console.log('Target element is now visible! Its ID + entry.target.id');
+                        document.querySelector('.profile-pic').classList.add('fadein-1');
+                        document.querySelector('.title').classList.add('fadein-2');
+                        document.querySelector('.divider.short').classList.add('fadein-3');
+                        document.querySelector('#paragraph-1').classList.add('fadein-3');
+                        document.querySelector('#paragraph-2').classList.add('fadein-4');
+                        document.querySelector('#paragraph-3').classList.add('fadein-5');
+                        // Optional: Stop observing the element after the first intersection
+                        observer.unobserve(entry.target);
+                    }
+                  });
+                };
+
+                // 2. Define the options (optional, uses defaults if omitted)
+                const options = {
+                  root: null, // Use the document's viewport as the root
+                  rootMargin: '0px', // No margin around the root
+                  threshold: 1.0 // Trigger callback when 100% of the target is visible
+                };
+
+                // 3. Create the observer instance
+                const observer = new IntersectionObserver(handleIntersection, options);
+
+                // 4. Start observing a target element
+                const targetElement = document.querySelector('.profile-pic');
+                if (targetElement) {
+                  observer.observe(targetElement);
                 }
-              });
-            };
-
-            // 2. Define the options (optional, uses defaults if omitted)
-            const options = {
-              root: null, // Use the document's viewport as the root
-              rootMargin: '0px', // No margin around the root
-              threshold: 1.0 // Trigger callback when 100% of the target is visible
-            };
-
-            // 3. Create the observer instance
-            const observer = new IntersectionObserver(handleIntersection, options);
-
-            // 4. Start observing a target element
-            const targetElement = document.querySelector('.profile-pic');
-            if (targetElement) {
-              observer.observe(targetElement);
-            }
+            });
         </script>
     </body>
 
