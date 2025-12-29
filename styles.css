@@ -16,7 +16,7 @@ body {
     width: 8px;
     height: 8px;
     background-color: #12131400;
-    border: 1px solid #54555C48;
+    border: 1px solid #54555C56;
     pointer-events: none;
     /*border-radius: 100px;*/
     animation-name: fadeout;
