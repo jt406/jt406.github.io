@@ -51,9 +51,9 @@ let selectOption1;
 let selectOption2;
 let selectOption3;
 
-let increment;
+let score;
 
-const powerupsArr = [];
+const powerupsArr = ["+1"];
 
 function resetLevel(currLevel, currGoal, currTime, currIncrement) {
   level = currLevel;
@@ -86,8 +86,19 @@ function didBeatLevel() {
 }
 
 // Note: Try the 3d button for a more tactile feel, aka the pomofocus button
-bigButton.addEventListener("click", function() { 
+bigButton.addEventListener("click", function() { // Next time, test to see if this works; also integrate the score variable throughout code
     if (currState == gameState.PLAY) {
+      for (let i=0; i < powerupsArr.length; i++) {
+        if (powerupsArr[i].charAt(0) == "+") {
+          score = score + parseInt(powerupsArr[i].substring(1,powerupsArr.length-1));
+        } else if (powerupsArr[i].charAt(0) == "x") {
+          score = score * parseInt(powerupsArr[i].substring(1,powerupsArr.length-1));
+        } else {
+          console.log("Something weird happened with updating the score.");
+        }
+      }
+
+
       bigNum += increment;
       bigNumTxt.innerHTML = bigNum;
       didBeatLevel();
