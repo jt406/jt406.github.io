@@ -53,11 +53,13 @@ let selectOption3;
 
 let increment;
 
+const powerupsArr = [];
+
 function resetLevel(currLevel, currGoal, currTime, currIncrement) {
   level = currLevel;
   goal = currGoal;
   time = currTime;
-  bigNum = 0;
+  bigNum = 1;
   increment = currIncrement;
   
   levelTxt.innerHTML = level;
@@ -181,6 +183,7 @@ function showGameUI(selectedPowerup) {
       </div>
     `;
     increment *= 2; //figure out how to make x2 apply to current number; does this feel intuitive in the first place?
+    //need to use an array to iterate through the powerups and apply them to current score - https://share.google/aimode/LHPv3NiEMV4Z17HOv
     console.log("increment is " + increment);
   } else if (selectedPowerup == selectedOption.THREE) {
     powerups.innerHTML += `

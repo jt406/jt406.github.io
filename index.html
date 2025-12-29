@@ -72,6 +72,31 @@
                 }
             });
         </script>
+
+        <script>
+            function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);   // Ensure min is an integer
+                max = Math.floor(max);  // Ensure max is an integer
+                // The formula ensures an even distribution across the range, including both min and max
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            
+
+            function handleMouseMove(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                const newDiv = document.createElement("div");
+                newDiv.classList.add("square"); 
+                newDiv.style.left = `${x-getRandomIntInclusive(-56, 56)}px`;
+                newDiv.style.top = `${y-getRandomIntInclusive(-56, 56)}px`;
+
+                document.body.appendChild(newDiv); // -2) take a break to think about how you feel; might go against chill vibe -1) tryout random placements near mouse; learn how random num works 0) on click, make shapes white 1) limit how often it runs, so we can see the individual shapes 2) add a scale on click 3) delete shapes after a while 4) Save this and then explore grid approach like Browser Company
+            }
+
+            document.addEventListener('mousemove', handleMouseMove);
+        </script>
     </body>
 
     <!-- https://share.google/aimode/5FDOFPvtJi2angWTH // how to create trailing effect -->
@@ -100,43 +125,5 @@
         }); 
     </script> 
     -->
-
-    <!--
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const profilePic = document.querySelector('.profile-pic');
-            if (profilePic) {
-                profilePic.classList.add('fadein-1');
-            }
-
-            const title = document.querySelector('.title');
-            if (title) {
-                title.classList.add('fadein-2');
-            }
-
-            const divider = document.querySelector('.divider.short');
-            if (divider) {
-                divider.classList.add('fadein-3');
-            }
-
-            const p1 = document.querySelector('#paragraph-1');
-            if (p1) {
-                p1.classList.add('fadein-3');
-            }
-
-            const p2 = document.querySelector('#paragraph-2');
-            if (p2) {
-                p2.classList.add('fadein-4');
-            }
-
-            const p3 = document.querySelector('#paragraph-3');
-            if (p3) {
-                p3.classList.add('fadein-5');
-            }
-
-        });
-    </script>
-    -->
-
 </html>
 

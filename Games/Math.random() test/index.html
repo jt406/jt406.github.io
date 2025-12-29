@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+  
+    <body>
+        <div id='output' style='margin: 24px 0px'>Button has been clicked 0 times.</div>
+        <button id='randomButton'>Generate random</button>
+
+        <script>
+            let numClicked = 0;
+
+            const myButton = document.getElementById("randomButton");
+
+            function handleClick() {
+                numClicked++;
+                document.getElementById('output').innerHTML = `Button has been clicked ${numClicked} times.`;
+                // next steps: figure out how Math.random() works from scratch rather than just relying on AI without thinking
+            }
+
+            myButton.addEventListener('click', handleClick);
+        </script>
+    </body>
+
+</html>
