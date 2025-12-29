@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #121314;
+                color: #9697A3;
+            }
+
+            .square {
+                position: absolute;
+                opacity: 1;
+                width: 8px;
+                height: 8px;
+                background-color: #12131400;
+                border: 1px solid #54555C56;
+                pointer-events: none;
+                /*border-radius: 100px;*/
+                animation-name: fadeout;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fadeout {
+                0% {opacity: 1;}
+                100% {opacity: 0;}
+            }
+        </style>
+    </head>
+  
+    <body>
+        <div id='test'>This is inside the test div.</div>
+
+        <script>
+            function handleMouseMove(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+                document.getElementById('test').innerHTML =`Mouse position: X = ${x}, Y = ${y}`;
+                consolel.log(`Mouse position: X = ${x}, Y = ${y}`);
+            }
+
+            document.addEventListener('mousemove', handleMouseMove);
+
+            function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);   // Ensure min is an integer
+                max = Math.floor(max);  // Ensure max is an integer
+                // The formula ensures an even distribution across the range, including both min and max
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function handleMouseMoveTrailEffect(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                const newDiv = document.createElement("div");
+                newDiv.classList.add("square"); 
+                newDiv.style.left = `${x-getRandomIntInclusive(-56, 56)}px`;
+                newDiv.style.top = `${y-getRandomIntInclusive(-56, 56)}px`;
+
+                document.body.appendChild(newDiv); //  -2) debug how Math.random works -1) decrease number of squares so it's more calming 0) on mousedown, make shapes a bit whiter 1) add a scale on mousedown 3) delete shapes afterwards 5) move onto portfolio preso's 
+            }
+
+            document.addEventListener('mousemove', handleMouseMoveTrailEffect);
+        </script>
+        </script>
+    </body>
+
+</html>

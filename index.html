@@ -72,31 +72,6 @@
                 }
             });
         </script>
-
-        <script>
-            function getRandomIntInclusive(min, max) {
-                min = Math.ceil(min);   // Ensure min is an integer
-                max = Math.floor(max);  // Ensure max is an integer
-                // The formula ensures an even distribution across the range, including both min and max
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
-
-            
-
-            function handleMouseMove(event) {
-                const x = event.clientX;
-                const y = event.clientY;
-
-                const newDiv = document.createElement("div");
-                newDiv.classList.add("square"); 
-                newDiv.style.left = `${x-getRandomIntInclusive(-56, 56)}px`;
-                newDiv.style.top = `${y-getRandomIntInclusive(-56, 56)}px`;
-
-                document.body.appendChild(newDiv); //  -1) decrease number of squares 0) on mousedown, make shapes a bit whiter 1) add a scale on mousedown 3) delete shapes afterwards 5) move onto portfolio preso's 
-            }
-
-            document.addEventListener('mousemove', handleMouseMove);
-        </script>
     </body>
 
     <!-- https://share.google/aimode/5FDOFPvtJi2angWTH // how to create trailing effect -->
@@ -110,20 +85,5 @@
     <!-- https://share.google/aimode/Ryv3ChhoXdPk8F0Y0 // Chrome loads pages too fast, so animation starts too soon; UPDATE: Tried the DOMContentLoaded approach, didn't work, so try intersectionObserver API -->
 
     <!-- https://css-tricks.com/making-animations-wait/ // Making animations wait; try the IntersectionObserverAPI first-->
-
-    <!--
-    <script>
-        document.addEventListener('mousemove', (e) => {
-            const square = document.createElement('div');
-            square.classList.add('test-square');
-
-            square.style.left = '${e.clientX - 8}px';
-            square.style.right = '$(e.clientY - 8}px';
-            console.log('the left coord: ' + square.style.left);
-
-            document.body.appendChild(square);
-        }); 
-    </script> 
-    -->
 </html>
 
