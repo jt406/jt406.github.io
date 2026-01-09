@@ -4,19 +4,20 @@
     <head>
     </head>
   
-    <body>
-        <div id='output' style='margin: 24px 0px'>Button has been clicked 0 times.</div>
+    <body style='margin: 32px 16px'>
+        <div id='output' style='margin-bottom: 16px; font-size: 24px'>(Random number goes here)</div>
         <button id='randomButton'>Generate random</button>
 
         <script>
-            let numClicked = 0;
-
             const myButton = document.getElementById("randomButton");
 
             function handleClick() {
-                numClicked++;
-                document.getElementById('output').innerHTML = `Button has been clicked ${numClicked} times.`;
-                // next steps: figure out how Math.random() works from scratch rather than just relying on AI without thinking
+                // Math.random() generates a random number from 0 to 0.999999...
+                // let randNum = Math.floor(Math.random()*100+1); // Random number from 1 to 100
+                // let randNum = Math.floor(Math.random()*10+1); // Random number from 1 to 10
+                // Next steps: Figure out how to make this generic and work for any range
+                let randNum = Math.floor(Math.random()*10+1); // Random number from 3 to 7
+                document.getElementById('output').innerHTML = `${randNum}`;
             }
 
             myButton.addEventListener('click', handleClick);

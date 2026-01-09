@@ -51,9 +51,8 @@ let selectOption1;
 let selectOption2;
 let selectOption3;
 
-let score;
-
-const powerupsArr = ["+1"];
+let powerupsArr = ["+1"];
+let isFirstPowerup = true;
 
 function resetLevel(currLevel, currGoal, currTime, currIncrement) {
   level = currLevel;
@@ -88,22 +87,23 @@ function didBeatLevel() {
 // Note: Try the 3d button for a more tactile feel, aka the pomofocus button
 bigButton.addEventListener("click", function() { // Next time, test to see if this works; also integrate the score variable throughout code
     if (currState == gameState.PLAY) {
-      for (let i=0; i < powerupsArr.length; i++) {
+      for (let i=0; i < powerupsArr.length; i++) { // Now need to update the array with new powerups
         if (powerupsArr[i].charAt(0) == "+") {
-          score = score + parseInt(powerupsArr[i].substring(1,powerupsArr.length-1));
+          increment = parseInt(powerupsArr[i].substring(1,powerupsArr[i].length));
+          bigNum = bigNum + increment;
         } else if (powerupsArr[i].charAt(0) == "x") {
-          score = score * parseInt(powerupsArr[i].substring(1,powerupsArr.length-1));
+          increment = parseInt(powerupsArr[i].substring(1,powerupsArr[i].length));
+          bigNum = bigNum * increment;
         } else {
-          console.log("Something weird happened with updating the score.");
+          console.log("Something weird happened with updating the score."); 
         }
       }
-
-
-      bigNum += increment;
       bigNumTxt.innerHTML = bigNum;
       didBeatLevel();
     } else if (currState == gameState.GAMEOVER) {
       resetLevel(1,3,5,1);
+      powerupsArr = ['+1']; // figure how to clear the powerups after the game is over
+      console.log(`powerupsArr: ${powerupsArr}`);
       powerups.innerHTML = "";
     } else if (currState == gameState.BEATLEVEL) {
       showShopUI(); 
@@ -125,6 +125,12 @@ function startCountdown() {
     }
     time -= 1;
   }, 1000);
+}
+
+function generateRandomItems(level) {
+  // 1) Think about how to determine random items for each level 2) Think about how to implement it
+  // level 2: basic: add 10 or 20, mult 2x or 3x, curse: add 30 or 40, multiply 4x or 5x
+  // level 3: basic:  
 }
 
 function showShopUI() {
@@ -179,42 +185,46 @@ function showShopUI() {
 }
 
 function showGameUI(selectedPowerup) {
+  if (isFirstPowerup) {
+    powerupsArr.pop();
+    isFirstPowerup = false;
+  }
+
+
   if (selectedPowerup == selectedOption.ONE) {
     powerups.innerHTML += `
       <div class="stat">
           <span class="value">+20</span>
       </div>
     `;
-    increment += 20;
-    console.log("increment is " + increment);
+    powerupsArr.push('+20'); 
   } else if (selectedPowerup == selectedOption.TWO) {
     powerups.innerHTML += `
       <div class="stat">
           <span class="value">x2</span>
       </div>
     `;
-    increment *= 2; //figure out how to make x2 apply to current number; does this feel intuitive in the first place?
-    //need to use an array to iterate through the powerups and apply them to current score - https://share.google/aimode/LHPv3NiEMV4Z17HOv
-    console.log("increment is " + increment);
+    powerupsArr.push('x2');
   } else if (selectedPowerup == selectedOption.THREE) {
     powerups.innerHTML += `
       <div class="stat">
           <span class="value">+40</span>
       </div>
     `;
-    increment += 40;
+    powerupsArr.push('+40');
     time = 4;
-    console.log("increment is " + increment);
   } 
 
-
-  statsBar.innerHTML = '<div><div class="stat"><span class="name">Level: </span><span class="value" id="level">' + level + '</span></div><div class="stat last-item"><span class="name">Goal: </span><span class="value" id="goal">' + goal + '</span></div></div><div class="stat"><span class="name">Time: </span><span class="value" id="time">' + time + '</span></div>';
+  
   actionArea.innerHTML = `
     <div id="number-area">
         <p id="big-number">0</p>
     </div>
   `;
   bigButton.style.display = "inline-block"; 
+  timeStat.style.display = "inline-block";
+  timeTxt.innerHTML = time; 
+  levelLabelTxt.innerHTML = "Level: ";
 
   levelTxt = document.getElementById("level");
   goalTxt = document.getElementById("goal");
