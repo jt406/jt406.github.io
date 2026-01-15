@@ -1,4 +1,4 @@
-// Function declaration
+ // Function declaration
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
@@ -14,7 +14,7 @@ const gameState = {
   BEATLEVEL: "BEATLEVEL",
   SHOP: "SHOP"
 }
-
+d
 const selectedOption = {
   ONE: "ONE",
   TWO: "TWO",
@@ -79,7 +79,7 @@ function didBeatLevel() {
     clearInterval(timeCountdown);
     currState = gameState.BEATLEVEL;
     level++;
-    goal *= 10;
+    goal = generateGoal(level);
     time = 5;
   }
 }
@@ -127,11 +127,33 @@ function startCountdown() {
   }, 1000);
 }
 
-function generateRandomItems(level) {
-  // 1) Think about how to determine random items for each level 2) Think about how to implement it
-  // level 2: basic: add 10 or 20, mult 2x or 3x, curse: add 30 or 40, multiply 4x or 5x
-  // level 3: basic:  
+function generateGoal(level) {
+  return level * (10 ** level); // N x 10^n
 }
+
+function generatePowerup(level) {
+  let powerupRange;
+  let powerup;
+
+  if (getRandomIntInclusive(1,10) >= 6) { // 60% chance for additive powerup
+    powerupRange = [10**(level-1),10**(level)]; // (10,100), (100,1000), etc
+    // now need to use random function again to get number from this range
+    powerup = `+${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
+  } else { // 40% chance for multiplicative powerup
+    powerupRange = [level, level+2]; // (2,4), (3,5), etc
+    powerup = `x${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
+  }
+
+  return powerup; // test this out now
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);   // Ensure min is an integer
+  max = Math.floor(max);  // Ensure max is an integer
+  // The formula ensures an even distribution across the range, including both min and max
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 
 function showShopUI() {
   levelLabelTxt.innerHTML = "Next Level: ";
@@ -140,6 +162,10 @@ function showShopUI() {
 
   timeStat.style.display = "none";
   bigButton.style.display = "none";
+
+  let powerupsArr1 = generatePowerups(level); 
+  let powerupsArr2 = generatePowerups(level);
+  let powerupsArr3 = generatePowerups(level);
 
   actionArea.innerHTML = `
     <div class="shop-option">
