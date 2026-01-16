@@ -14,12 +14,6 @@ const gameState = {
   BEATLEVEL: "BEATLEVEL",
   SHOP: "SHOP"
 }
-d
-const selectedOption = {
-  ONE: "ONE",
-  TWO: "TWO",
-  THREE: "THREE"
-}
 
 let currState;
 let level;
@@ -46,10 +40,6 @@ let statsBar = document.getElementById("stats-bar");
 let actionArea = document.getElementById("action-area");
 
 let powerups = document.getElementById("powerups");
-
-let selectOption1;
-let selectOption2;
-let selectOption3;
 
 let powerupsArr = ["+1"];
 let isFirstPowerup = true;
@@ -137,13 +127,13 @@ function generatePowerup(level) {
 
   if (getRandomIntInclusive(1,10) >= 6) { // 60% chance for additive powerup
     powerupRange = [10**(level-1),10**(level)]; // (10,100), (100,1000), etc
-    // now need to use random function again to get number from this range
     powerup = `+${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
   } else { // 40% chance for multiplicative powerup
     powerupRange = [level, level+2]; // (2,4), (3,5), etc
     powerup = `x${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
   }
 
+  console.log(powerup);
   return powerup; // test this out now
 }
 
@@ -163,24 +153,33 @@ function showShopUI() {
   timeStat.style.display = "none";
   bigButton.style.display = "none";
 
-  let powerupsArr1 = generatePowerups(level); 
-  let powerupsArr2 = generatePowerups(level);
-  let powerupsArr3 = generatePowerups(level);
+  let powerUp1 = generatePowerup(level);
+  let powerUp2 = generatePowerup(level);
+  let powerUp3 = generatePowerup(level);
 
   actionArea.innerHTML = `
     <div class="shop-option">
       <div class="shop-item">
-        <div class="item-effect">+20</div>
+        <div class="item-effect">${powerUp1}</div>
       </div>
       <button class="select-option" id="select-option-1">Select</button>
     </div>
     <div class="shop-option">
       <div class="shop-item">
-        <div class="item-effect">x2</div>
+        <div class="item-effect">${powerUp2}</div>
       </div>
       <button class="select-option" id="select-option-2">Select</button>
     </div>
     <div class="shop-option">
+      <div class="shop-item">
+        <div class="item-effect">${powerUp3}</div>
+      </div>
+      <button class="select-option" id="select-option-3">Select</button>
+    </div>
+  `;
+
+  /*
+  <div class="shop-option">
       <div class="shop-item">
         <div class="special-item">
           <div class="item-effect">+40</div>
@@ -191,55 +190,38 @@ function showShopUI() {
       </div>
       <button class="select-option" id="select-option-3">Select</button>
     </div>
-  `;
+  */
+
 
   selectOption1 = document.getElementById("select-option-1");
   selectOption2 = document.getElementById("select-option-2");
   selectOption3 = document.getElementById("select-option-3");
 
   selectOption1.addEventListener("click", function() { 
-    showGameUI(selectedOption.ONE);
+    showGameUI(powerUp1);
   });
 
   selectOption2.addEventListener("click", function() { 
-    showGameUI(selectedOption.TWO);
+    showGameUI(powerUp2);
   });
 
   selectOption3.addEventListener("click", function() { 
-    showGameUI(selectedOption.THREE);
+    showGameUI(powerUp3);
   });
 }
 
-function showGameUI(selectedPowerup) {
+function showGameUI(powerupValue) {
   if (isFirstPowerup) {
     powerupsArr.pop();
     isFirstPowerup = false;
   }
 
-
-  if (selectedPowerup == selectedOption.ONE) {
-    powerups.innerHTML += `
-      <div class="stat">
-          <span class="value">+20</span>
-      </div>
-    `;
-    powerupsArr.push('+20'); 
-  } else if (selectedPowerup == selectedOption.TWO) {
-    powerups.innerHTML += `
-      <div class="stat">
-          <span class="value">x2</span>
-      </div>
-    `;
-    powerupsArr.push('x2');
-  } else if (selectedPowerup == selectedOption.THREE) {
-    powerups.innerHTML += `
-      <div class="stat">
-          <span class="value">+40</span>
-      </div>
-    `;
-    powerupsArr.push('+40');
-    time = 4;
-  } 
+  powerups.innerHTML += `
+    <div class="stat">
+        <span class="value">${powerupValue}</span>
+    </div>
+  `;
+  powerupsArr.push(powerupValue); 
 
   
   actionArea.innerHTML = `
