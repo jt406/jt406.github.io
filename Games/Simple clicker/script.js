@@ -61,6 +61,8 @@ function resetLevel(currLevel, currGoal, currTime, currIncrement) {
   startCountdown();
 }
 
+
+//Next step: Add a final victory state (perhaps after lvl7)
 function didBeatLevel() {
   if (goal <= bigNum) {
     bigNumTxt.style.fontSize = "64px";
@@ -91,7 +93,7 @@ bigButton.addEventListener("click", function() { // Next time, test to see if th
       bigNumTxt.innerHTML = bigNum;
       didBeatLevel();
     } else if (currState == gameState.GAMEOVER) {
-      resetLevel(1,3,5,1);
+      resetLevel(1,10,5,1);
       powerupsArr = ['+1']; // figure how to clear the powerups after the game is over
       console.log(`powerupsArr: ${powerupsArr}`);
       powerups.innerHTML = "";
@@ -118,18 +120,19 @@ function startCountdown() {
 }
 
 function generateGoal(level) {
-  return level * (10 ** level); // N x 10^n
+  return level * (10 ** level); // N x 10^n; 
 }
 
+// Next step: Tweak the balance so that it's harder and more satisfying to win
 function generatePowerup(level) {
   let powerupRange;
   let powerup;
 
-  if (getRandomIntInclusive(1,10) >= 6) { // 60% chance for additive powerup
-    powerupRange = [10**(level-1),10**(level)]; // (10,100), (100,1000), etc
+  if (getRandomIntInclusive(1,100) > 20) { // 80% chance for additive powerup;
+    powerupRange = [10**(level-2),10**(level-1)]; // (1,10), (10,100), (100,1000), etc
     powerup = `+${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
-  } else { // 40% chance for multiplicative powerup
-    powerupRange = [level, level+2]; // (2,4), (3,5), etc
+  } else { // 20% chance for multiplicative powerup
+    powerupRange = [level, level+1]; // (2,3), (3,4), etc
     powerup = `x${getRandomIntInclusive(powerupRange[0],powerupRange[1])}`;
   }
 
@@ -244,4 +247,4 @@ function showGameUI(powerupValue) {
   resetLevel(level, goal, time, increment);
 }  
 
-resetLevel(1,3,5,1); // initiate game
+resetLevel(1,10,5,1); // initiate game
