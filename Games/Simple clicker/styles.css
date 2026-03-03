@@ -3,18 +3,29 @@
   --very-light-grey: #EBEBF0;
   --light-grey: #DFDFE5;
   --grey: #71717A;
+  --very-light-black: #67677A;
   --light-black: #454552;
   --black: #33333D;
   --dark-black: #020203;
 
+  --page-background: var(--white);
 	--section-background: var(--very-light-grey);
 	--nested-section-background: var(--light-grey);
 	--button-background: var(--black);
 	--button-background-hover: var(--light-black);
 	--button-background-active: var(--dark-black);
+	--button-background-loading: var(--very-light-black);
 	--secondary-text: var(--grey);
 	--primary-text: var(--black);
 	--inverse-text: var(--white);
+
+
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports(font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
 }
 
 * {
@@ -49,6 +60,13 @@ body {
 	padding: 8px 9px 8px 8px;
 }
 
+.stat.score {
+	display: inline-block;
+	background-color: var(--page-background);
+	padding: 8px 9px 8px 8px;
+	margin-top: 24px;
+}
+
 .stat .name {
 	color: #71717A;
 }
@@ -63,6 +81,7 @@ body {
 
 #number-area {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 328px;
@@ -138,6 +157,7 @@ body {
 	font-size: 20px;
 	font-weight: 500;
 	cursor: pointer;
+	border: none;
 }
 
 .select-option:hover {
@@ -145,8 +165,22 @@ body {
 }
 
 .select-option:active {
-  background-color: var(--button-background-active);
+  /*background-color: var(--button-background-active);*/ /*figure out how to fix colors to make it more obvious that the loading bar is moving*/
+  background-image: linear-gradient(to right, var(--button-background-active) 0%, var(--button-background-active) 50%, var(--button-background-hover) 50%, var(--button-background-hover) 100%);
+  background-size: 190% 100%;
+  background-position: 100%; /* 100% -> 0% */
+  animation: 0.25s confirmation linear forwards;
 }
+
+@keyframes confirmation {
+	from {
+		background-position: 100%;
+	}
+	to {
+		background-position: 0%;
+	}
+}
+/* Learn how to overlay an invisible div over the select-option button https://www.youtube.com/watch?v=By8w2gs7U_U */
 
 #powerups .stat{
 	margin-top: 8px;
