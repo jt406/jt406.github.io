@@ -38,6 +38,8 @@ body {
 	color: var(--primary-text);
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  user-select: none;
 }
 
 .game-area {
