@@ -124,6 +124,7 @@ bigButton.addEventListener("click", function() { // Next time, test to see if th
     } else if (currState == gameState.GAMEOVER) {
       powerupsArr = ['+1']; // figure how to clear the powerups after the game is over
       powerups.innerHTML = "";
+      isFirstPowerup = true;
       resetLevel(1,10,5,1);
     } else if (currState == gameState.BEATLEVEL) {
       showShopUI(); 
@@ -311,6 +312,7 @@ function showGameUI(powerupValue) {
   if (isFirstPowerup) {
     powerupsArr.pop();
     isFirstPowerup = false;
+    console.log("popped the array");
   }
 
   powerups.innerHTML += `
